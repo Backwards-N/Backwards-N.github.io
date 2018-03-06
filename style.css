@@ -1,10 +1,6 @@
-body {
-    background-color: black;
-}
-
 div {
-    background-color: yellow !important;
-    background-clip: padding-box !important;
+    background-color: yellow;
+    background-clip: padding-box;
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;   
@@ -43,4 +39,8 @@ h2 {
 .linklist {
     text-align: center;
     padding-bottom: 0.1cm;
+}
+
+body {
+    background-color: black;
 }

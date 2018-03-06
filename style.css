@@ -1,8 +1,8 @@
 div {
     background-color: white;
     border-radius: 15px 50px;
-    padding-left: 10%;
-    padding-right: 10%;   
+    margin-left: 10%;
+    margin-right: 10%;   
 }
 
 img {
@@ -26,18 +26,18 @@ h1 {
 p {
     text-align: left;
     font-family: "Courier New", Courier, monospace;
-    padding-bottom: 0.5cm;
+    margin-bottom: 1em;
 }
 
 h2 {
     text-align: left;
     font-family: "Courier New", Courier, monospace;
-    padding-bottom: 0.5cm;
+    margin-bottom: 1em;
 }
 
 .linklist {
     text-align: center;
-    padding-bottom: 0.1cm;
+    margin-bottom: 1em;
 }
 
 body {

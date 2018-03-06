@@ -4,6 +4,7 @@ body {
 
 div {
     background: white !important;
+    background-clip: padding-box;
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;   

@@ -1,6 +1,6 @@
 div {
-    background-color: yellow;
-    background-clip: padding-box;
+    background-color: white;
+    background-clip: content-box;
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;   

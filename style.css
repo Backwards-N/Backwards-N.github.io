@@ -2,6 +2,13 @@ body {
     background: black;
 }
 
+div {
+    background: white;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;   
+}
+
 img {
     width: 50%;
     margin: auto 0;
@@ -35,11 +42,4 @@ h2 {
 .linklist {
     text-align: center;
     padding-bottom: 0.1cm;
-}
-
-div {
-    background: white;
-    width: 80%;
-    padding-left: 10%;
-    padding-right: 10%;   
 }

@@ -3,7 +3,7 @@ body {
 }
 
 div {
-    background: white;
+    background: white !important;
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;   

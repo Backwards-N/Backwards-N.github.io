@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="utf-8">
+            <title>Create A Player</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src=classpect_registry.js></script>
+            <script src=char_creator.js defer="defer"></script>
+            <link rel="stylesheet" href="./byle.css">
+        </head>
+        <body>
+                <noscript><h2>This website requires Javascript, please enable it or switch to a device that supports it.</h2></noscript>
+                <p><a href="index.html">Home.</a></p>
+                <h1>Character Creator</h1>
+                <p class='debugText'></p>
+                <form action="playeradd.php" method="post">
+                <p class='creatorMenu'>Enter name: <input type="text" id="playerName" name="name">
+                <input type="radio" class="playerGender" name="gender" value="0" id="femaleGender">Female
+                <input type="radio" class="playerGender" name="gender" value="1" id="maleGender">Male</p>
+                <p class='creatorMenu'>Class:
+                <select id="classDropdown" name="class">
+                    <option value='1'>Rouge</option>
+                    <option value='2'>Thief</option>
+                    <option value='3'>Maid</option>
+                    <option value='4'>Heir</option>
+                    <option value='5'>Page</option>
+                    <option value='6'>Knight</option>
+                    <option value='7'>Seer</option>
+                    <option value='8'>Sylph</option>
+                    <option value='9'>Mage</option>
+                    <option value='10'>Witch</option>
+                    <option value='11'>Bard</option>
+                    <option value='12'>Prince</option>
+<!--                    <option value='13'>Priest</option>
+                    <option value='14'>Fool</option>
+                    <option value='15'>Gent</option>
+                    <option value='16'>Sleuth</option>
+                    <option value='17'>Waste</option> -->
+                </select>
+                Aspect: 
+                <select id="aspectDropdown" name="aspect">
+                    <option value='1'>Time</option>
+                    <option value='2'>Space</option>
+                    <option value='3'>Void</option>
+                    <option value='4'>Light</option>
+                    <option value='5'>Mind</option>
+                    <option value='6'>Heart</option>
+                    <option value='7'>Rage</option>
+                    <option value='8'>Hope</option>
+                    <option value='9'>Doom</option>
+                    <option value='10'>Life</option>
+                    <option value='11'>Blood</option>
+                    <option value='12'>Breath</option>
+<!--                    <option value='13'>Scope</option>
+                    <option value='14'>Spheres</option>
+                    <option value='15'>Rule</option>
+                    <option value='16'>Strife</option> -->
+                </select>
+                </p>
+                <p id="classBox" class="info"></p>
+                <p id="aspectBox" class="info"></p>
+                <p class='creatorMenu'>
+                    
+                    
+                    <!-- Forgive me. -->
+                    
+                    
+                    
+                    
+                     <span id="rPoints"></span>
+                <br/>Mangrit:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="manGrit" name="grit"> <span id="gritSpan"></span>
+                <br/>Speed:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="speed" name="speed"><span id="spdSpan"></span>
+                <br/>Stealth:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="stealth" name="stealth"><span id="stlthSpan"></span>
+                <br/>Willpower:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="willPower" name="will"><span id="willSpan"></span>
+                <br/>Good Luck:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="goodLuck" name="gluck"><span id="goodSpan"></span>
+                <br/>Bad Luck:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="badLuck" name="bluck"><span id="badSpan"></span>
+                <br/>Gel Viscosity:&nbsp;<input disabled type="number" step="1" value="0" id="gelViscosity" name="gel"><span id="gelSpan"></span>
+                </p>
+                <p>Add player: <input type="submit" id="addPlayer"></p>
+                </form>
+        </body>
+    </html>
+    
+    
+    

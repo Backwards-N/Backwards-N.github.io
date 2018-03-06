@@ -1,0 +1,48 @@
+body {
+    background: black;
+}
+
+img {
+    width: 50%;
+    margin: auto 0;
+    max-width: 50%;
+    display: block;
+    padding: 25%;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+h1 {
+    background: -webkit-linear-gradient(gray, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+p {
+    color: white;
+    text-align: left;
+    font-family: "Courier New", Courier, monospace;
+    width: 80%;
+    padding-bottom: 0.5cm;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h2 {
+    color: white;
+    text-align: left;
+    font-family: "Courier New", Courier, monospace;
+    width: 80%;
+    padding-bottom: 0.5cm;
+    padding-left: 15%;
+    padding-right: 5%;
+}
+
+.linklist {
+    text-align: center;
+    padding-bottom: 0.1cm;
+}
+
+

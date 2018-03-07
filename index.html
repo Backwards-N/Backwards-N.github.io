@@ -21,6 +21,19 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+     // Initialize Firebase
+     var config = {
+       apiKey: "AIzaSyClCIpY8LSqhGDMweZCGKgvExDKTp9PzEI",
+       authDomain: "furthestring-149.firebaseapp.com",
+       databaseURL: "https://furthestring-149.firebaseio.com",
+       projectId: "furthestring-149",
+       storageBucket: "furthestring-149.appspot.com",
+       messagingSenderId: "545649936608"
+      };
+      firebase.initializeApp(config);
+    </script>
   </head>
   <body>
     <img src="images/enter_1.jpg"
@@ -33,18 +46,4 @@
           <h2>News:</h2>
         </div>
   </body>
-  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-  <script>
-   // Initialize Firebase
-   var config = {
-     apiKey: "AIzaSyClCIpY8LSqhGDMweZCGKgvExDKTp9PzEI",
-     authDomain: "furthestring-149.firebaseapp.com",
-     databaseURL: "https://furthestring-149.firebaseio.com",
-     projectId: "furthestring-149",
-     storageBucket: "furthestring-149.appspot.com",
-     messagingSenderId: "545649936608"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="./firecommands.js"></script>
 </html>

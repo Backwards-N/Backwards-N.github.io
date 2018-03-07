@@ -3,9 +3,8 @@ A website for multiplayer JS based games as well as minor Javascript projects.
 
 Please contribute and don't be afraid to submit new ideas for projects! I'm likely to accept anything provided it isn't hateful (or trolling.)
 
-# Things to do.
-* php needs to be converted to AJAX.
-* SQL needs to be transferred to Firebase.
+# Things to do
+* CSS improvements.
 
 # Current Projects
 

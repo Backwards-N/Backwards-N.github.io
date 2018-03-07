@@ -19,6 +19,35 @@ div {
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
 }
 
+form {
+    text-align: left;
+}
+
+p.creatorMenu {
+    text-align: left;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+p.playerDisplay {
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+}
+
+.debugText {
+    text-align: left;
+    border-style: none;
+}
+
+.info {
+    text-align: left;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: orange;
+}
+
 img {
     width: 50%;
     margin: auto 0;

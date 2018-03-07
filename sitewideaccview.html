@@ -30,7 +30,7 @@
             var providerData = user.providerData;
             user.getIdToken().then(function(accessToken) {
               document.getElementById('sign-in-status').textContent = 'Signed in';
-              document.getElementById('sign-in').textContent = '<a href="./deauth.html">Sign out</a>';
+              document.getElementById('sign-in').innerHTML = '<a href="./deauth.html">Sign out</a>';
               document.getElementById('account-details').textContent = JSON.stringify({
                 displayName: displayName,
                 email: email,
@@ -42,7 +42,7 @@
           } else {
             // User is signed out.
             document.getElementById('sign-in-status').textContent = 'Signed out';
-            document.getElementById('sign-in').textContent = '< a href="./authentication.html">Sign in</a>';
+            document.getElementById('sign-in').innerHTML = '< a href="./authentication.html">Sign in</a>';
             document.getElementById('account-details').textContent = 'null';
           }
         }, function(error) {

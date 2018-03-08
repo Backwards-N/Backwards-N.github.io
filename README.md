@@ -1,4 +1,5 @@
-# Backwards-N.github.io
+![a prospit themed server sits in the void](./images/furthest-ring-149.png)
+# The Furthest Ring
 A website for multiplayer JS based games as well as minor Javascript projects.
 
 Please contribute and don't be afraid to submit new ideas for projects! I'm likely to accept anything provided it isn't hateful (or trolling.)

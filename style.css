@@ -45,6 +45,7 @@ p.creatorMenu {
 .logo {
     width: 10%;
     max-width: 10%;
+    vertical-align: middle;
 }
 
 h1 {

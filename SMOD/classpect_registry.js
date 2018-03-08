@@ -1,3 +1,5 @@
+//TODO: add comments
+
 function smodClass(grit, spd, stlth, will, gluk, bluk, vis, special_internal_name) {
     this.manGrit = grit;
     this.speed = spd;

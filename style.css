@@ -36,10 +36,10 @@ p.creatorMenu {
     text-align: left;
 }
 
-img {
-    width: 50%;
+.logo {
+    width: 10%;
     margin: auto 0;
-    max-width: 50%;
+    max-width: 10%;
     display: block;
     padding: 25%;
     padding-bottom: 0;

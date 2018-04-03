@@ -41,9 +41,9 @@
             });
           } else {
             // User is signed out.
-            document.getElementById('sign-in-status').textContent = 'Signed out';
-            document.getElementById('sign-in').innerHTML = '<a href="./authentication.html">Sign in</a>';
-            document.getElementById('account-details').textContent = 'Log in to view account information.';
+            document.getElementById('sign-in-status').textContent = 'You are currently signed out.';
+            document.getElementById('sign-in').innerHTML = '<a href="./authentication.html">Sign in?</a>';
+            document.getElementById('account-details').textContent = 'Sign in to view account information.';
           }
         }, function(error) {
           console.log(error);

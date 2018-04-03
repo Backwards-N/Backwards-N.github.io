@@ -29,21 +29,21 @@
             var phoneNumber = user.phoneNumber;
             var providerData = user.providerData;
             user.getIdToken().then(function(accessToken) {
-              document.getElementById('sign-in-status').textContent = 'Signed in';
-              document.getElementById('sign-in').innerHTML = '<a href="./deauth.html">Sign out</a>';
-              document.getElementById('account-details').textContent = JSON.stringify({
+              document.getElementById('sign-in-status').textContent = 'You are currently signed in.';
+              document.getElementById('sign-in').innerHTML = '<a href="./deauth.html">Sign out?</a>';
+              document.getElementById('account-details').textContent = JSON.parse({
                 displayName: displayName,
                 email: email,
                 emailVerified: emailVerified,
                 phoneNumber: phoneNumber,
                 photoURL: photoURL
-              }, null, '  ');
+              });
             });
           } else {
             // User is signed out.
-            document.getElementById('sign-in-status').textContent = 'Signed out';
-            document.getElementById('sign-in').innerHTML = '<a href="./authentication.html">Sign in</a>';
-            document.getElementById('account-details').textContent = 'null';
+            document.getElementById('sign-in-status').textContent = 'You are currently signed out.';
+            document.getElementById('sign-in').innerHTML = '<a href="./authentication.html">Sign in?</a>';
+            document.getElementById('account-details').textContent = 'Sign in to view account information.';
           }
         }, function(error) {
           console.log(error);
@@ -63,8 +63,9 @@
         <a href="https://backwards-n.github.io/SMOD/index.html">Project: SMOD</a>
       </p>
     </div>
-    <div id="sign-in-status"></div>
-    <div id="sign-in"></div>
+    //TODO: Properly display account info.
+    <div><p id="sign-in-status"></p>
+    <p id="sign-in"></p></div>
     <div id="account-details"></div>
   </body>
 </html>

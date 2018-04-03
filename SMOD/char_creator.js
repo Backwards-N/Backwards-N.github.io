@@ -58,7 +58,6 @@ function logPlayer() {
     logStlth = stlthUpdate();
     logBad = badUpdate();
     logGood = goodUpdate();
-    logGel = gelUpdate();
     logWill = willUpdate();
     
     window.alert('Player added.');
@@ -72,7 +71,6 @@ function logPlayer() {
         stlth: logStlth,
         bad: logBad,
         good: logGood,
-        gel: logGel,
         will: logWill
     })
     .then(function(docRef) {

@@ -4,20 +4,56 @@
         <meta charset="utf-8">
             <title>Create A Player</title>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src=classpect_registry.js></script>
-            <script src=char_creator.js defer="defer"></script>
             <link rel="stylesheet" href="../style.css">
-        </head>
-        <body>
-                <noscript><h2>This website requires Javascript, please enable it or switch to a device that supports it.</h2></noscript>
-            <div>
-              <p>
-                <a href="https://backwards-n.github.io/index.html">Home</a> | 
-                <a href="https://backwards-n.github.io/sitewideaccview.html">Account</a> | 
-                <a href="https://backwards-n.github.io/SMOD/index.html">Project: SMOD</a>
-              </p>
-            </div>
-                <p><a href="index.html">Home.</a></p>
+      <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyClCIpY8LSqhGDMweZCGKgvExDKTp9PzEI",
+          authDomain: "furthestring-149.firebaseapp.com",
+          databaseURL: "https://furthestring-149.firebaseio.com",
+          projectId: "furthestring-149",
+          storageBucket: "furthestring-149.appspot.com",
+          messagingSenderId: "545649936608"
+        };
+        firebase.initializeApp(config);
+      </script>
+      <script type="text/javascript">
+      initApp = function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var photoURL = user.photoURL;
+            user.getIdToken().then(function(accessToken) {
+              document.getElementById('account-details').textContent = JSON.parse({
+                "displayName": displayName
+              });
+            });
+          } else {
+            document.getElementById('account-details').textContent = '';
+          }
+        }, function(error) {
+          console.log(error);
+        });
+      };
+      window.addEventListener('load', function() {
+        initApp()
+      });
+    </script>
+    <script src=classpect_registry.js></script>
+    <script src=char_creator.js defer="defer"></script>
+  </head>
+  <body>
+    <div>
+      <p>
+        <img class="logo" src="/images/furthest-ring-149.svg"> | 
+        <a href="https://backwards-n.github.io/index.html">Home</a> | 
+        <a href="https://backwards-n.github.io/sitewideaccview.html">Account</a> | 
+        <a href="https://backwards-n.github.io/SMOD/index.html">Project: SMOD</a> |
+        <span id="account-details"></span>
+      </p>
+    </div>
                 <div><h1>Character Creator</h1>
                 <p class='debugText'></p>
                 </div><form action="playeradd.php" method="post"><div>

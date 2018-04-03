@@ -24,9 +24,7 @@
             var displayName = user.displayName;
             var photoURL = user.photoURL;
             user.getIdToken().then(function(accessToken) {
-              document.getElementById('account-details').textContent = JSON.parse({
-                "displayName": displayName
-              });
+              document.getElementById('account-details').textContent = displayName;
             });
           } else {
             document.getElementById('account-details').textContent = '';

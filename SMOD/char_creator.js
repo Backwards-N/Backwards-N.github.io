@@ -64,7 +64,16 @@ function logPlayer() {
     console.window.alert('Player added.');
     
     db.collection("players").add({
-        name: 
+        name: logName, 
+        gender: logGender,
+        aspect: logAspect,
+        grit: logGrit,
+        spd: logSpd,
+        stlth: logStlth,
+        bad: logBad,
+        good: logGood,
+        gel: logGel,
+        will: logWill
     })
     .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);

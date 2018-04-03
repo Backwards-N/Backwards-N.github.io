@@ -32,11 +32,11 @@
               document.getElementById('sign-in-status').textContent = 'You are currently signed in.';
               document.getElementById('sign-in').innerHTML = '<a href="./deauth.html">Sign out?</a>';
               document.getElementById('account-details').textContent = JSON.parse({
-                displayName: displayName,
-                email: email,
-                emailVerified: emailVerified,
-                phoneNumber: phoneNumber,
-                photoURL: photoURL
+                "displayName": displayName,
+                "email": email,
+                "emailVerified": emailVerified,
+                "phoneNumber": phoneNumber,
+                "photoURL": photoURL
               });
             });
           } else {

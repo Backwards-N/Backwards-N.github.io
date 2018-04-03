@@ -1,8 +1,9 @@
 var debugText = document.querySelector('.debugText');
 var creatorMenu = document.querySelector('.creatorMenu');
 var playerName = document.querySelector('#playerName');
-var version = "v0.1";
-var debug = true;
+var db = firebase.firestore();
+var version = "v1.1";
+var debug = false;
 
 updateUpdate();
 
@@ -24,6 +25,7 @@ $("#badLuck").on('change', updateUpdate);
 $("#goodLuck").on('change', updateUpdate);
 $("#gelViscosity").on('change', updateUpdate);
 $("#willPower").on('change', updateUpdate);
+$("addPlayer").on('click', logPlayer)
 
 function updateUpdate() {
     var megaBox = document.querySelector('#rPoints');
@@ -44,6 +46,41 @@ function updateUpdate() {
     }
     
     return maxINum;
+}
+
+function logPlayer() {
+    logName = nameUpdate();
+    logGender = genderUpdate();
+    logClass = classUpdate();
+    logAspect = aspectUpdate();
+    logGrit = gritUpdate();
+    logSpd = spdUpdate();
+    logStlth = stlthUpdate();
+    logBad = badUpdate();
+    logGood = goodUpdate();
+    logGel = gelUpdate();
+    logWill = willUpdate();
+    
+    console.window.alert('Player added.');
+    
+    db.collection("players").add({
+        name: logName, 
+        gender: logGender,
+        aspect: logAspect,
+        grit: logGrit,
+        spd: logSpd,
+        stlth: logStlth,
+        bad: logBad,
+        good: logGood,
+        gel: logGel,
+        will: logWill
+    })
+    .then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+    console.error("Error adding document: ", error);
+    });
 }
 
 function nameUpdate() {

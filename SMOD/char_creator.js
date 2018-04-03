@@ -25,7 +25,7 @@ $("#badLuck").on('change', updateUpdate);
 $("#goodLuck").on('change', updateUpdate);
 $("#gelViscosity").on('change', updateUpdate);
 $("#willPower").on('change', updateUpdate);
-$("addPlayer").on('click', logPlayer)
+$("#addPlayer").on('click', logPlayer)
 
 function updateUpdate() {
     var megaBox = document.querySelector('#rPoints');
@@ -61,7 +61,7 @@ function logPlayer() {
     logGel = gelUpdate();
     logWill = willUpdate();
     
-    console.window.alert('Player added.');
+    window.alert('Player added.');
     
     db.collection("players").add({
         name: logName, 

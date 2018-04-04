@@ -3,7 +3,8 @@
   <head>
       <title>Project: SMOD</title>
       <link rel="stylesheet" href="./style.css">
-      <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
       <script>
         // Initialize Firebase
         var config = {
@@ -15,6 +16,8 @@
           messagingSenderId: "545649936608"
         };
         firebase.initializeApp(config);
+        
+        var db = firebase.firestore();
       </script>
       <script type="text/javascript">
       initApp = function() {
@@ -25,10 +28,26 @@
             var photoURL = user.photoURL;
             var providerData = user.providerData;
             var uid = user.uid;
+            var workingData;
             user.getIdToken().then(function(accessToken) {
               document.getElementById('sign-in-status').textContent = 'You are currently signed in.';
               document.getElementById('sign-in').innerHTML = '<a href="./deauth.html">Sign out?</a>';
-              document.getElementById('account-details').innerhtml = '<p>' + displayName + ': </p> <p> SMOD: </p>';
+              db.collection("players").where("owner", "==", uid)
+                .get()
+                .then(function(querySnapshot) {
+                    querySnapshot.forEach(function(doc) {
+                        // doc.data() is never undefined for query doc snapshots
+                        workingData = doc.data();
+                        document
+                          .getElementById('account-details')
+                          .innerhtml = document
+                             .getElementById('account-details')
+                             .innerhtml + '<p>' + displayName + ': </p> <p> SMOD: </p>' + workingData;
+                    });
+                })
+                .catch(function(error) {
+                    console.log("Error getting documents: ", error);
+                });
             });
           } else {
             // User is signed out.

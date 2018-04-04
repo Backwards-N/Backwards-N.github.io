@@ -2,7 +2,6 @@ var debugText = document.querySelector('.debugText');
 var creatorMenu = document.querySelector('.creatorMenu');
 var playerName = document.querySelector('#playerName');
 
-var uid = user.uid;
 var db = firebase.firestore();
 var version = "v1.1";
 var debug = false;

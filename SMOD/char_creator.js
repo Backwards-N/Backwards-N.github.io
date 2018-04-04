@@ -74,7 +74,7 @@ function logPlayer() {
         bad: logBad,
         good: logGood,
         will: logWill,
-        owner: uid
+        owner: userIdentifier
     })
     .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);

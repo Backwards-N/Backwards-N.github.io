@@ -39,7 +39,7 @@
                         // doc.data() is never undefined for query doc snapshots
                         workingData = doc.data();
                         console.log(workingData);
-                        document.querySelector("#account-details").textContent = JSON.parse(workingData);
+                        document.querySelector("#account-details").textContent = JSON.stringify(workingData);
                     });
                 })
                 .catch(function(error) {

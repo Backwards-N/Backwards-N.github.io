@@ -43,7 +43,7 @@
                           .getElementById('account-details')
                           .innerhtml = document
                              .getElementById('account-details')
-                             .innerhtml + '<p>' + displayName + ': </p> <p> SMOD: </p>' + workingData;
+                             .innerhtml + '<p>' + displayName + ': </p> <p> SMOD: </p>' + JSON.stringify(workingData);
                     });
                 })
                 .catch(function(error) {

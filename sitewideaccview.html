@@ -40,7 +40,17 @@
                         // doc.data() is never undefined for query doc snapshots
                         workingData = doc.data();
                         console.log(workingData);
-                        document.getElementById("account-details").innerHTML += '<p>' + workingData.name + ', ' + getClassByID(workingData.class).sin + ' of ' + getAspectByID(workingData.aspect).sin + '</p>';
+                        document.getElementById("account-details").innerHTML += '<p>' + workingData.name + ', '
+                          + getClassByID(workingData.class).sin + ' of '
+                          + getAspectByID(workingData.aspect).sin + '</p>' + '<p> Level '
+                          + workingData.level
+                          + '<br /> Gel Viscosity: ' + calculateStatAtLevel(workingData.level, getClassById(workingData.class).gel, getAspectById(workingData.aspect).gel, 0)
+                          + '<br /> Speed: ' + calculateStatAtLevel(workingData.level, getClassById(workingData.class).grit, getAspectById(workingData.aspect).grit, workingData.grit)
+                          + '<br /> Willpower: ' + calculateStatAtLevel(workingData.level, getClassById(workingData.class).spd, getAspectById(workingData.aspect).spd, workingData.spd)
+                          + '<br /> Good Luck: ' + calculateStatAtLevel(workingData.level, getClassById(workingData.class).good, getAspectById(workingData.aspect).good, workingData.good)
+                          + '<br /> Bad Luck: ' + calculateStatAtLevel(workingData.level, getClassById(workingData.class).bad, getAspectById(workingData.aspect).bad, workingData.bad)
+                          + '<br /> Stealth: ' + calculateStatAtLevel(workingData.level, getClassById(workingData.class).stlth, getAspectById(workingData.aspect).stlth, workingData.stlth)
+                          + '</p>';
                     });
                 })
                 .catch(function(error) {

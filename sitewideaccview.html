@@ -37,9 +37,9 @@
                 .then(function(querySnapshot) {
                     querySnapshot.forEach(function(doc) {
                         // doc.data() is never undefined for query doc snapshots
-                        workingData = doc.data();
+                        workingData = JSON.parse(doc.data());
                         console.log(workingData);
-                        document.querySelector("#account-details").textContent = JSON.stringify(workingData);
+                        document.querySelector("#account-details").textContent = workingData.name;
                     });
                 })
                 .catch(function(error) {

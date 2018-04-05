@@ -45,11 +45,12 @@
                           + getAspectByID(workingData.aspect).sin + '</p>' + '<p> Level '
                           + workingData.level
                           + '<br /> Gel Viscosity: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).gelViscosity, getAspectByID(workingData.aspect).gelViscosity, 0)
-                          + '<br /> Speed: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).manGrit, getAspectByID(workingData.aspect).manGrit, workingData.grit)
-                          + '<br /> Willpower: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).speed, getAspectByID(workingData.aspect).speed, workingData.spd)
+                          + '<br /> Mangrit: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).manGrit, getAspectByID(workingData.aspect).manGrit, workingData.grit)
+                          + '<br /> Speed: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).speed, getAspectByID(workingData.aspect).speed, workingData.spd)
                           + '<br /> Good Luck: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).goodLuck, getAspectByID(workingData.aspect).goodLuck, workingData.good)
                           + '<br /> Bad Luck: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).badLuck, getAspectByID(workingData.aspect).badLuck, workingData.bad)
                           + '<br /> Stealth: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).stealth, getAspectByID(workingData.aspect).stealth, workingData.stlth)
+                          + '<br /> Willpower:' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).willPower, getAspectByID(workingData.aspect).willPower, workingData.will);
                           + '</p>';
                     });
                 })

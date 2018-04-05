@@ -40,7 +40,7 @@
                         // doc.data() is never undefined for query doc snapshots
                         workingData = doc.data();
                         console.log(workingData);
-                        document.getElementById("account-details").innerHTML = '<p>' + workingData.name + ', ' + getClassByID(workingData.class).sin + ' of ' + getAspectByID(workingData.aspect).sin + '</p>';
+                        document.getElementById("account-details").innerHTML += '<p>' + workingData.name + ', ' + getClassByID(workingData.class).sin + ' of ' + getAspectByID(workingData.aspect).sin + '</p>';
                     });
                 })
                 .catch(function(error) {

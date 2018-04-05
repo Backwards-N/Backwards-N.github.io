@@ -28,7 +28,7 @@
             var photoURL = user.photoURL;
             var providerData = user.providerData;
             var uid = user.uid;
-            workingData;
+            var workingData;
             user.getIdToken().then(function(accessToken) {
               document.getElementById('sign-in-status').textContent = 'You are currently signed in.';
               document.getElementById('sign-in').innerHTML = '<a href="./deauth.html">Sign out?</a>';

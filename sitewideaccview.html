@@ -38,6 +38,7 @@
                     querySnapshot.forEach(function(doc) {
                         // doc.data() is never undefined for query doc snapshots
                         workingData = doc.data();
+                        console.log(workingData);
                         document
                           .getElementById('account-details')
                           .innerhtml = document

@@ -66,6 +66,7 @@ function logPlayer() {
     db.collection("players").add({
         name: logName, 
         gender: logGender,
+        class: logClass,
         aspect: logAspect,
         grit: logGrit,
         spd: logSpd,

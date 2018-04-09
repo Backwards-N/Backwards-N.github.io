@@ -26,7 +26,6 @@
             // User is signed in.
             var displayName = user.displayName;
             var photoURL = user.photoURL;
-            let uid = user.uid;
             user.getIdToken().then(function(accessToken) {
               document.getElementById('account-details').textContent = displayName;
             });
@@ -36,7 +35,6 @@
         }, function(error) {
           console.log(error);
         });
-        return uid;
       };
 
       window.addEventListener('load', function() {

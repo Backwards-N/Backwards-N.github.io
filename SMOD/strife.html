@@ -29,8 +29,6 @@
             var uid = user.uid;
             user.getIdToken().then(function(accessToken) {
               document.getElementById('account-details').textContent = displayName;
-              
-            return uid;
             });
           } else {
             document.getElementById('account-details').textContent = '';
@@ -38,6 +36,7 @@
         }, function(error) {
           console.log(error);
         });
+        return uid;
       };
 
       window.addEventListener('load', function() {

@@ -16,4 +16,3 @@ db.collection("players").where("owner", "==", uid)
                 .catch(function(error) {
                     console.log("Error getting documents: ", error);
                 });
-            });

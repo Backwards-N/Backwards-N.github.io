@@ -10,7 +10,7 @@ db.collection("players").where("owner", "==", uid)
                         // doc.data() is never undefined for query doc snapshots
                         workingData = doc.data();
                         console.log(workingData);
-                        choosePlayer.innerHtml += "<option value='" + doc.id "'>" + doc.name + "</option>"
+                        choosePlayer.innerHtml += "<option value='" + doc.id "'>" + doc.name + "</option>";
                     });
                 })
                 .catch(function(error) {

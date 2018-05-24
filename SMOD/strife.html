@@ -41,9 +41,12 @@
 
       window.addEventListener('load', function() {
         initApp();
+        
+        var strife = document.createElement("script");
+        strife.src = "https://backwards-n.github.io/SMOD/strife.js";
+        document.getElementsByTagName("head")[0].appendChild(tag);
       });
     </script>
-    <script src="https://backwards-n.github.io/SMOD/strife.js"></script>
   </head>
   <body>
     <div>

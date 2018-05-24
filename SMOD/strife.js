@@ -11,12 +11,8 @@ function strifeSelect() {
                         // doc.data() is never undefined for query doc snapshots
                         workingData = doc.data();
                         console.log(workingData);
-                        if (choosePlayer.innerHtml == "undefined") {
-                          choosePlayer.innerHtml = "<option value='" + doc.id + "'>" + doc.data().name + "</option>";
-                        } else {
-                          choosePlayer.innerHtml += "<option value='" + doc.id + "'>" + doc.data().name + "</option>";
-                        }
-                        //$("#choosePlayer").load();
+                        playerDropdownHTML += "<option value='" + doc.id + "'>" + doc.data().name + "</option>";
+                        $("#choosePlayer").load(playerDropdownHTML);
                     });
                 })
                 .catch(function(error) {

@@ -21,7 +21,7 @@
       </script>
       <script type="text/javascript">
       initApp = function() {
-        firebase.auth().onAuthStateChanged(function(user) {
+       var int2UID = firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in.
             var displayName = user.displayName;
@@ -30,12 +30,15 @@
             user.getIdToken().then(function(accessToken) {
               document.getElementById('account-details').textContent = displayName;
             });
+            
+            return intUID;
           } else {
             document.getElementById('account-details').textContent = '';
           }
         }, function(error) {
           console.log(error);
         });
+        return int2UID;
       };
 
       window.addEventListener('load', function() {

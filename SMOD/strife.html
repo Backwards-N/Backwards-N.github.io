@@ -20,25 +20,23 @@
         var db = firebase.firestore();
       </script>
       <script type="text/javascript">
+      var tempInvisible2393;
       initApp = function() {
        var int2UID = firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in.
             var displayName = user.displayName;
             var photoURL = user.photoURL;
-            var intUID = user.uid;
+            tempInvisible2393 = user.uid;
             user.getIdToken().then(function(accessToken) {
               document.getElementById('account-details').textContent = displayName;
             });
-            
-            return intUID;
           } else {
             document.getElementById('account-details').textContent = '';
           }
         }, function(error) {
           console.log(error);
         });
-        return int2UID;
       };
 
       window.addEventListener('load', function() {

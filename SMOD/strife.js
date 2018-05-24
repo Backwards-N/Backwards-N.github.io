@@ -3,7 +3,7 @@ db = firebase.firestore();
 var choosePlayer = document.querySelector('#choosePlayer');
 var startStrife = document.querySelector('#startStrife');
 
-window.onload = function() {
+function strifeSelect() {
   db.collection("players").where("owner", "==", userIdentifier)
                 .get()
                 .then(function(querySnapshot) {

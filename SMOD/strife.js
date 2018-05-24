@@ -11,6 +11,7 @@ function strifeSelect() {
                         // doc.data() is never undefined for query doc snapshots
                         workingData = doc.data();
                         console.log(workingData);
+                        var playerDropdownHTML = "";
                         playerDropdownHTML += "<option value='" + doc.id + "'>" + doc.data().name + "</option>";
                         $("#choosePlayer").load(playerDropdownHTML);
                     });

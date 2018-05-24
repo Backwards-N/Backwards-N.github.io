@@ -3,7 +3,8 @@ db = firebase.firestore();
 var choosePlayer = document.querySelector('#choosePlayer');
 var startStrife = document.querySelector('#startStrife');
 
-db.collection("players").where("owner", "==", userIdentifier)
+window.onload = function() {
+  db.collection("players").where("owner", "==", userIdentifier)
                 .get()
                 .then(function(querySnapshot) {
                     querySnapshot.forEach(function(doc) {
@@ -16,3 +17,4 @@ db.collection("players").where("owner", "==", userIdentifier)
                 .catch(function(error) {
                     console.log("Error getting documents: ", error);
                 });
+}

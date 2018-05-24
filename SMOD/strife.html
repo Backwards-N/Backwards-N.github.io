@@ -21,7 +21,7 @@
       </script>
       <script type="text/javascript">
       initApp = function() {
-        firebase.auth().onAuthStateChanged(function(user) {
+        int2UID = firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in.
             var displayName = user.displayName;
@@ -38,10 +38,11 @@
         }, function(error) {
           console.log(error);
         });
+        return int2UID;
       };
 
       window.addEventListener('load', function() {
-        initApp()
+        const uid = initApp();
       });
     </script>
     <script src="https://backwards-n.github.io/SMOD/strife.js"></script>

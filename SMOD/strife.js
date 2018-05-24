@@ -16,6 +16,7 @@ function strifeSelect() {
                         } else {
                           choosePlayer.innerHtml += "<option value='" + doc.id + "'>" + doc.data().name + "</option>";
                         }
+                        $("#choosePlayer").load();
                     });
                 })
                 .catch(function(error) {

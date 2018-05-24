@@ -30,15 +30,12 @@
             user.getIdToken().then(function(accessToken) {
               document.getElementById('account-details').textContent = displayName;
             });
-            
-            return intUID;
           } else {
             document.getElementById('account-details').textContent = '';
           }
         }, function(error) {
           console.log(error);
         });
-        return int2UID;
       };
 
       window.addEventListener('load', function() {

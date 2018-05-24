@@ -31,6 +31,8 @@
             user.getIdToken().then(function(accessToken) {
               document.getElementById('account-details').textContent = displayName;
             });
+            
+            strifeSelect();
           } else {
             document.getElementById('account-details').textContent = '';
           }
@@ -43,9 +45,6 @@
     <script>
       window.addEventListener('load', function() {
         initApp();
-       firebase.auth().onAuthStateChanged(strifeSelect(), function(error) {
-          console.log(error);
-        });
       });
     </script>
   </head>

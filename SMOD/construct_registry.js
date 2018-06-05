@@ -27,7 +27,7 @@ function gristType(pow, spd, stlth, hlth, trg, tier, scl, special_internal_name)
 function createUnderling(construct, grist_type, attributes) {
     this.power = construct.power * grist_type.power;
     this.speed = construct.speed * grist_type.speed;
-    this.stealth = construct.stealth * grist_type;
+    this.stealth = construct.stealth * grist_type.stealth;
     this.health = construct.health * grist_type.health;
     this.trigger = construct.trigger * grist_type.trigger;
     this.size = construct.size; 

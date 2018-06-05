@@ -38,7 +38,10 @@ function createUnderling(construct, grist_type, attributes) {
 var amber = new gristType(1, 1, 1, 1, 1, 'one', 1, 'amber');
 var chalk = new gristType(1, 1, 1, 1, 1, 'one', 2, 'chalk');
 var shale = new gristType(1, 1, 1, 1, 1, 'one', 1, 'shale');
+
 var frosting = new gristType(1, 1, 1, 1, 1, 'one', 5, 'frosting');
+var rockCandy = new gristType(1.1, 1.2, 1.3, 1.4, 1.5, 'two', 5, 'frosting');
+
 var iodine = new gristType(1, 1, 1, 1, 1, 'one', 2, 'iodine');
 var crystal = new gristType(1, 1, 1, 1, 1, 'one', 1, 'crystal');
 var wood  = new gristType(1, 1, 1, 1, 1, 'one', 3, 'wood');

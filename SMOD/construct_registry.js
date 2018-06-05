@@ -68,8 +68,8 @@ var lichQueen = new smodConstruct(250, 500, 5, 10000, 0.9, 75, 'nine', 'imp');
 var homeworld  = new smodConstruct(0, 0, 0, 100000000000000000, 0, 600000000, 'planet', 'homeworld');
 var land = new smodConstruct(0, 0, 0, 10000000, 0, 10000, 'planet', 'land');
 var meteor = new smodConstruct(0, 0, 0, 100000, 0, 1500, 'planet', 'meteor');
-var moon = new smodConstruct(0, 0, 0, , 1000000, 1750, 'planet', 'moon');
-var miniMoon = new smodConstruct(0, 0, 0, , 100000, 1000, 'planet', 'moon');
+var moon = new smodConstruct(0, 0, 0, 1000000, 0, 1750, 'planet', 'moon');
+var miniMoon = new smodConstruct(0, 0, 0, 100000, 0, 1000, 'planet', 'moon');
 var skaia = new smodConstruct(0, 0, 0, 100000000, 0, 17500, 'planet', 'skaia');
 
 // denizens.

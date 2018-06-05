@@ -11,6 +11,38 @@ function smodConstruct(pow, spd, stlth, hlth, trg, siz, tier, special_internal_n
     this.sin = special_internal_name;
 }
 
+function gristType(pow, spd, stlth, hlth, trg, tier, scl, special_internal_name) {
+    this.power = pow;
+    this.speed = spd;
+    this.stealth = stlth;
+    this.health = hlth;
+    this.trigger = trg;
+    this.gristTier = tier;
+    this.gristScale = scl;
+    this.sin = special_internal_name;
+}
+
+// Strife functions.
+
+function createUnderling(construct, grist_type, attributes) {
+    this.power = construct.power * grist_type.power;
+    this.speed = construct.speed * grist_type.speed;
+    this.stealth = construct.stealth * grist_type;
+    this.health = construct.health * grist_type.health;
+    this.trigger = construct.trigger * grist_type.trigger;
+    this.size = construct.size; 
+}
+
+// grist types.
+
+var amber = new gristType(1, 1, 1, 1, 1, 'one', 1, 'amber');
+var chalk = new gristType(1, 1, 1, 1, 1, 'one', 2, 'chalk');
+var shale = new gristType(1, 1, 1, 1, 1, 'one', 1, 'shale');
+var frosting = new gristType(1, 1, 1, 1, 1, 'one', 5, 'frosting');
+var iodine = new gristType(1, 1, 1, 1, 1, 'one', 2, 'iodine');
+var crystal = new gristType(1, 1, 1, 1, 1, 'one', 1, 'crystal');
+var wood  = new gristType(1, 1, 1, 1, 1, 'one', 3, 'wood');
+
 // underlings.
 
 var imp = new smodConstruct(1, 1, 0, 20, 0.1, 1, 'zero', 'imp');
@@ -39,3 +71,5 @@ var meteor = new smodConstruct(0, 0, 0, 100000, 0, 1500, 'planet', 'meteor');
 var moon = new smodConstruct(0, 0, 0, , 1000000, 1750, 'planet', 'moon');
 var miniMoon = new smodConstruct(0, 0, 0, , 100000, 1000, 'planet', 'moon');
 var skaia = new smodConstruct(0, 0, 0, 100000000, 0, 17500, 'planet', 'skaia');
+
+// denizens.

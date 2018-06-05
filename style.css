@@ -12,7 +12,7 @@ div {
   border: 2px solid #34313F;
   -webkit-border-radius: 26px 8px;
   border-radius: 26px 8px;
-  font: normal 16px/1 "Courier New", Courier, monospace;
+  font: normal 16px/1 "Liberation Mono", Liberation, monospace
   color: #eeeeee;
   text-align: center;
   -o-text-overflow: ellipsis;
@@ -58,7 +58,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Liberation Mono", Liberation, monospace
 }
 
 .linklist {

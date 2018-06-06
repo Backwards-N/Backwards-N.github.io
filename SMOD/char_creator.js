@@ -137,9 +137,9 @@ function classUpdate() {
     } else if (cDrop.value == 12) {
         cBox.textContent = "Princes always completely invert their aspect, giving them abilites that match those of no other class or aspect. They gain more of their inverted aspect by destroying their original aspect. Ideally this allows them to rise in power as they attack. Princes are negatively affected in the stats that their aspect boosts.";
     } else if (cDrop.value == 13) {
-        cBox.textContent = "Gents ";
+        cBox.textContent = "Lords ";
     } else if (cDrop.value == 14) {
-        cBox.textContent = "Sleuths ";
+        cBox.textContent = "Muses ";
     } else {
         cBox.textContent = "Oops, you broke the class box.";
         console.error("Class not found.");

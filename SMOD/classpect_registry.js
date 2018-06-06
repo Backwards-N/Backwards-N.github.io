@@ -55,6 +55,8 @@ function getClassByID(id) {
         10: witch,
         11: bard,
         12: prince,
+        13: lord,
+        14: muse,
     })[id]||rouge);
     
     return initClass;

@@ -91,11 +91,8 @@ var mage = new smodClass(-2,-2,2,-1,6,-2,8,'Mage');
 var witch = new smodClass(3,-2,-3,0,6,-1,11,'Witch');
 var bard = new smodClass(1,1,1,1,1,0,10,'Bard');
 var prince = new smodClass(3,0,2,0,0,0,11,'Prince');
-var priest = new smodClass(-5,4,3,-5,4,-4,9,'Priest');
-var fool = new smodClass(2,0,0,5,1,1,8,'Fool');
-var gent = new smodClass(5,1,-3,1,1,0,11,'Gent');
-var sleuth = new smodClass(-1,-2,5,3,0,0,12,'Sleuth');
-var waste = new smodClass(-5,-5,-5,30,-5,5,10,'Waste');
+var lord = new smodClass(7,7,-2,7,-7,7,7,'Lord');
+var muse = new smodClass(-7,-7,7,-2,7,-7,13,'Muse');
 
 var time = new smodAspect(1,6,-2,3,-1,2,13,'Time');
 var space = new smodAspect(3,-6,1,2,3,-2,14,'Space');
@@ -109,9 +106,4 @@ var doom = new smodAspect(3,3,3,0,2,6,7,'Doom');
 var life = new smodAspect(-6,4,1,2,4,0,20,'Life');
 var blood = new smodAspect(4,2,2,0,-6,-3,12,'Blood');
 var breath = new smodAspect(0,5,0,-4,2,-2,9,'Breath');
-var sphere = new smodAspect();
-var scope = new smodAspect();
-var rule = new smodAspect();
-var strife = new smodAspect();
-
 

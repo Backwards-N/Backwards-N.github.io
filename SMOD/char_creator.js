@@ -225,15 +225,9 @@ function gritUpdate() {
     } else if (iClass == 12) {
         cStat = prince.manGrit;
     } else if (iClass == 13) {
-        cStat = priest.manGrit;
+        cStat = lord.manGrit;
     } else if (iClass == 14) {
-        cStat = fool.manGrit;
-    } else if (iClass == 15) {
-        cStat = gent.manGrit;
-    } else if (iClass == 16) {
-        cStat = sleuth.manGrit;
-    } else if (iClass == 17) {
-        cStat = waste.manGrit;
+        cStat = muse.manGrit;
     } else {
         console.error("Class could not be found for STAT update.");
     }
@@ -305,15 +299,9 @@ function spdUpdate() {
     } else if (iClass == 12) {
         cStat = prince.speed;
     } else if (iClass == 13) {
-        cStat = priest.speed;
+        cStat = lord.speed;
     } else if (iClass == 14) {
-        cStat = fool.speed;
-    } else if (iClass == 15) {
-        cStat = gent.speed;
-    } else if (iClass == 16) {
-        cStat = sleuth.speed;
-    } else if (iClass == 17) {
-        cStat = waste.speed;
+        cStat = muse.speed;
     } else {
         console.error("Class could not be found for STAT update.");
     }
@@ -384,15 +372,9 @@ function stlthUpdate() {
     } else if (iClass == 12) {
         cStat = prince.stealth;
     } else if (iClass == 13) {
-        cStat = priest.stealth;
+        cStat = lord.stealth;
     } else if (iClass == 14) {
-        cStat = fool.stealth;
-    } else if (iClass == 15) {
-        cStat = gent.stealth;
-    } else if (iClass == 16) {
-        cStat = sleuth.stealth;
-    } else if (iClass == 17) {
-        cStat = waste.stealth;
+        cStat = muse.stealth;
     } else {
         console.error("Class could not be found for STAT update.");
     }
@@ -462,15 +444,9 @@ function badUpdate() {
     } else if (iClass == 12) {
         cStat = prince.badLuck;
     } else if (iClass == 13) {
-        cStat = priest.badLuck;
+        cStat = lord.badLuck;
     } else if (iClass == 14) {
-        cStat = fool.badLuck;
-    } else if (iClass == 15) {
-        cStat = gent.badLuck;
-    } else if (iClass == 16) {
-        cStat = sleuth.badLuck;
-    } else if (iClass == 17) {
-        cStat = waste.badLuck;
+        cStat = muse.badLuck;
     } else {
         console.error("Class could not be found for STAT update.");
     }
@@ -540,15 +516,9 @@ function goodUpdate() {
     } else if (iClass == 12) {
         cStat = prince.goodLuck;
     } else if (iClass == 13) {
-        cStat = priest.goodLuck;
+        cStat = lord.goodLuck;
     } else if (iClass == 14) {
-        cStat = fool.goodLuck;
-    } else if (iClass == 15) {
-        cStat = gent.goodLuck;
-    } else if (iClass == 16) {
-        cStat = sleuth.goodLuck;
-    } else if (iClass == 17) {
-        cStat = waste.goodLuck;
+        cStat = muse.goodLuck;
     } else {
         console.error("Class could not be found for STAT update.");
     }
@@ -617,15 +587,9 @@ function gelUpdate() {
     } else if (iClass == 12) {
         cStat = prince.gelViscosity;
     } else if (iClass == 13) {
-        cStat = priest.gelViscosity;
+        cStat = lord.gelViscosity;
     } else if (iClass == 14) {
-        cStat = fool.gelViscosity;
-    } else if (iClass == 15) {
-        cStat = gent.gelViscosity;
-    } else if (iClass == 16) {
-        cStat = sleuth.gelViscosity;
-    } else if (iClass == 17) {
-        cStat = waste.gelViscosity;
+        cStat = muse.gelViscosity;
     } else {
         console.error("Class could not be found for STAT update.");
     }
@@ -694,15 +658,9 @@ function willUpdate() {
     } else if (iClass == 12) {
         cStat = prince.willPower;
     } else if (iClass == 13) {
-        cStat = priest.willPower;
+        cStat = lord.willPower;
     } else if (iClass == 14) {
-        cStat = fool.willPower;
-    } else if (iClass == 15) {
-        cStat = gent.willPower;
-    } else if (iClass == 16) {
-        cStat = sleuth.willPower;
-    } else if (iClass == 17) {
-        cStat = waste.willPower;
+        cStat = muse.willPower;
     } else {
         console.error("Class could not be found for STAT update.");
     }

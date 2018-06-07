@@ -24,9 +24,9 @@ function strifeSelect() {
                 });
 }
 
-$("#startStrife").on('click', startStrife);
+$("#startStrife").on('click', loadStrife);
 
-function startStrife() {
+function loadStrife() {
   db.collection("players").where("id", "==", choosePlayer.id)
                 .get()
                 .then(function(querySnapshot) {

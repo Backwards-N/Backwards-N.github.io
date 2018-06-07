@@ -2,6 +2,8 @@ db = firebase.firestore();
 
 var choosePlayer = document.querySelector('#choosePlayer');
 var startStrife = document.querySelector('#startStrife');
+var playerDisplay = document.querySelector('#playerDisplay');
+var enemyDisplay = document.querySelector('#enemyDisplay');
 
 function strifeSelect() {
   db.collection("players").where("owner", "==", userIdentifier)

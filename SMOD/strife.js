@@ -27,9 +27,7 @@ function strifeSelect() {
 $("#startStrife").on('click', loadStrife);
 
 function loadStrife() {
-  console.log('Click!');
-  
-  db.collection("players").where("id", "==", choosePlayer.value)
+  db.collection("players").doc(choosePlayer.value)
                 .get()
                 .then(function(querySnapshot) {
                     querySnapshot.forEach(function(doc) {

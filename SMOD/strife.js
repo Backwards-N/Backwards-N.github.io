@@ -27,6 +27,15 @@ function strifeSelect() {
 $("#startStrife").on('click', loadStrife);
 
 function loadStrife() {
+  enemyMine = createUnderlingAtTiers(0, 1, null);
+  enemyDisplay.innerHTML = enemyMine.name
+                             + '<br /> Power: ' + enemyMine.power
+                             + '<br /> Speed: ' + enemyMine.speed
+                             + '<br /> Stealth: ' + enemyMine.stealth
+                             + '<br /> Health: ' + enemyMine.health
+                             + '<br /> Size: ' + enemyMine.size
+                             + '<br /> Trigger: ' + enemyMine.trigger;
+  
   db.collection("players").where(firebase.firestore.FieldPath.documentId(), "==", choosePlayer.value)
                 .get()
                 .then(function(querySnapshot) {
@@ -34,7 +43,7 @@ function loadStrife() {
                         // doc.data() is never undefined for query doc snapshots
                         workingData = doc.data();
                         console.log(workingData);
-                        playerDisplay.innerHTML = '<p>' + workingData.name + ', '
+                        playerDisplay.innerHTML = workingData.name + ', '
                           + getClassByID(workingData.class).sin + ' of '
                           + getAspectByID(workingData.aspect).sin + '</p>' + '<p> Level '
                           + workingData.level
@@ -45,7 +54,6 @@ function loadStrife() {
                           + '<br /> Bad Luck: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).badLuck, getAspectByID(workingData.aspect).badLuck, workingData.bad)
                           + '<br /> Stealth: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).stealth, getAspectByID(workingData.aspect).stealth, workingData.stlth)
                           + '<br /> Willpower:' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).willPower, getAspectByID(workingData.aspect).willPower, workingData.will);
-                          + '</p>';
                     });
                 })
                 .catch(function(error) {

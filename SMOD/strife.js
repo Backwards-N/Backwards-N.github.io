@@ -27,7 +27,7 @@ function strifeSelect() {
 $("#startStrife").on('click', loadStrife);
 
 function loadStrife() {
-  db.collection("players").doc(choosePlayer.value)
+  db.collection("players").where(firebase.firestore.FieldPath.documentId(), "==", choosePlayer.value)
                 .get()
                 .then(function(querySnapshot) {
                     querySnapshot.forEach(function(doc) {

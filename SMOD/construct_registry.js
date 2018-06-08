@@ -82,7 +82,7 @@ var iodine = new gristType(1, 1, 1, 1, 1, 'one', 2, 'iodine');
 var crystal = new gristType(1, 1, 1, 1, 1, 'one', 1, 'crystal');
 var wood  = new gristType(1, 1, 1, 1, 1, 'one', 3, 'wood');
 
-var gOne = [amber, chalk, shale, frosting, rockCandy, iodine, crystal, wood];
+var gOne = [amber, chalk, shale, frosting, iodine, crystal, wood];
 
 // underlings.
 

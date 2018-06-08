@@ -29,7 +29,7 @@ function getUnderlingsByTier(tier) {
         0: tZero,
         1: tOne,
         2: tTwo,
-        5: tThree,
+        5: tFive,
         7: tSeven,
         8: tEight,
         9: tNine,
@@ -38,7 +38,7 @@ function getUnderlingsByTier(tier) {
     return initLing; 
 }
 
-function getUnderlingsByTier(tier) {
+function getGristByTier(tier) {
     var initGrist = (({
         1: gOne,
     })[tier]||tNine);

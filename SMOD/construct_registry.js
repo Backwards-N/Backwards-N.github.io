@@ -76,7 +76,7 @@ var chalk = new gristType(1, 1, 1, 1, 1, 'one', 2, 'Chalk');
 var shale = new gristType(1, 1, 1, 1, 1, 'one', 1, 'Shale');
 
 var frosting = new gristType(1, 1, 1, 1, 1, 'one', 5, 'Frosting');
-var rockCandy = new gristType(1.1, 1.2, 1.3, 1.4, 1.5, 'Two', 5, 'rock candy');
+var rockCandy = new gristType(1.1, 1.2, 1.3, 1.4, 1.5, 'Two', 5, 'Rock Candy');
 
 var iodine = new gristType(1, 1, 1, 1, 1, 'one', 2, 'Iodine');
 var crystal = new gristType(1, 1, 1, 1, 1, 'one', 1, 'Crystal');

@@ -47,6 +47,7 @@ function getUnderlingsByTier(tier) {
 }
 
 function createUnderling(construct, grist_type, attributes) {
+    this.name = grist_type.sin + ' ' + construct.sin;
     this.power = construct.power * grist_type.power;
     this.speed = construct.speed * grist_type.speed;
     this.stealth = construct.stealth * grist_type.stealth;

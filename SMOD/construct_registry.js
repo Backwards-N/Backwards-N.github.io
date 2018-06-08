@@ -33,7 +33,7 @@ function getUnderlingsByTier(tier) {
         7: tSeven,
         8: tEight,
         9: tNine,
-    })[id]||tNine);
+    })[tier]||tNine);
     
     return initLing; 
 }
@@ -41,7 +41,7 @@ function getUnderlingsByTier(tier) {
 function getUnderlingsByTier(tier) {
     var initGrist = (({
         1: gOne,
-    })[id]||tNine);
+    })[tier]||tNine);
     
     return initGrist; 
 }

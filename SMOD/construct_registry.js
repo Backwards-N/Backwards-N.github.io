@@ -86,7 +86,7 @@ var gOne = [amber, chalk, shale, frosting, iodine, crystal, wood];
 
 // underlings.
 
-var imp = new smodConstruct(1, 1, 0, 20, 0.1, 1, 'zero', 'Imp');
+var imp = new smodConstruct(1, 1, 10, 20, 0.1, 1, 'zero', 'Imp');
 var tZero = [imp];
 
 var ogre = new smodConstruct(10, 3, 0, 100, 0.04, 10, 'one', 'Ogre');

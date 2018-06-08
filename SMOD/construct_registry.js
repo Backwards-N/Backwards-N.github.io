@@ -41,7 +41,7 @@ function getUnderlingsByTier(tier) {
 function getGristByTier(tier) {
     var initGrist = (({
         1: gOne,
-    })[tier]||tNine);
+    })[tier]||gOne);
     
     return initGrist; 
 }

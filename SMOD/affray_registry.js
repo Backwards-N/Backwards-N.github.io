@@ -22,5 +22,5 @@ function useAffray(affray, level, grit, wep_power) {
     outputDamage = ((2 * level) / 5) / 50;
   }
   
-  return outputDamage;
+  return math.ceil(outputDamage);
 }

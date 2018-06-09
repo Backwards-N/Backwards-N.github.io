@@ -11,9 +11,9 @@ function useAffray(affray, level, grit, wep_power) {
   var outputDamage;
   
   if (affray.type == 'melee') {
-    outputDamage = (((((2 * level) / 5) + 2) * affray.power * (wep_power + (grit / 10))) + 2) / 75;
+    outputDamage = (((((2 * level) / 10) + 2) * affray.power * (wep_power + (grit / 10))) + 2) / 75;
   } else if (affray.type == 'ranged') {
-    outputDamage = (((((2 * level) / 5) + 2) * affray.power * wep_power) + 2) / 75;
+    outputDamage = (((((2 * level) / 10) + 2) * affray.power * wep_power) + 2) / 75;
   } else if (affray.type == 'aspect') {
     outputDamage = ((((2 * level) + 2) * affray.power) + 2) / 75;
   } else if (affray.type == 'effect') {

@@ -33,7 +33,7 @@ $("#startStrife").on('click', loadStrife);
 $("#aggrieve").on('click', advanceStrife);
 
 function loadStrife() {
-  enemyMine = createUnderlingAtTiers(0, 1, null);
+  enemyMine = createUnderlingAtTiers(Math.round(Math.random), 1, null);
   enemyMineMaxHealth = enemyMine.health;
   enemyDisplay.innerHTML = enemyMine.name
                              + '<br /> Power: ' + enemyMine.power

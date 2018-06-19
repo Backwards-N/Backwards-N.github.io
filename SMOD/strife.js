@@ -34,11 +34,12 @@ $("#aggrieve").on('click', advanceStrife);
 
 function loadStrife() {
   enemyMine = createUnderlingAtTiers(0, 1, null);
+  enemyMineMaxHealth = enemyMine.health;
   enemyDisplay.innerHTML = enemyMine.name
                              + '<br /> Power: ' + enemyMine.power
                              + '<br /> Speed: ' + enemyMine.speed
                              + '<br /> Stealth: ' + enemyMine.stealth
-                             + '<br /> Health: ' + enemyMine.health
+                             + '<br /> Health: ' + Math.ceil((enemyMine.health/enemyMineMaxHealth)*100) + '%'
                              + '<br /> Size: ' + enemyMine.size
                              + '<br /> Trigger: ' + enemyMine.trigger;
   
@@ -68,7 +69,7 @@ function loadStrife() {
                         activePlayerLevel = workingData.level;
                       
                         playerBattleInfoDisplay.innerHTML =
-                        'Current Health: ' + Math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '&percnt';
+                        'Current Health: ' + Math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '%';
                     });
                 })
                 .catch(function(error) {
@@ -80,7 +81,7 @@ function advanceStrife() {
   if (enemyMine.speed > activePlayerSpeed) {
     activePlayerHealth = activePlayerHealth - enemyMine.power;
     playerBattleInfoDisplay.innerHTML =
-      'Current Health: ' + Math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '&percnt'
+      'Current Health: ' + Math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '%'
       + '( -' + enemyMine.power + '! )';
     
     var enemyHealthModifier = useAffray(aggrieve, activePlayerLevel, activePlayerGrit, 2);
@@ -89,7 +90,7 @@ function advanceStrife() {
                              + '<br /> Power: ' + enemyMine.power
                              + '<br /> Speed: ' + enemyMine.speed
                              + '<br /> Stealth: ' + enemyMine.stealth
-                             + '<br /> Health: ' + enemyMine.health + '( -' + enemyHealthModifier + '! )';
+                             + '<br /> Health: ' + Math.ceil((enemyMine.health/enemyMineMaxHealth)*100) + '%' + '( -' + enemyHealthModifier + '! )';
                              + '<br /> Size: ' + enemyMine.size
                              + '<br /> Trigger: ' + enemyMine.trigger;
   } else {
@@ -99,13 +100,13 @@ function advanceStrife() {
                              + '<br /> Power: ' + enemyMine.power
                              + '<br /> Speed: ' + enemyMine.speed
                              + '<br /> Stealth: ' + enemyMine.stealth
-                             + '<br /> Health: ' + enemyMine.health + '( -' + enemyHealthModifier + '! )';
+                             + '<br /> Health: ' + Math.ceil((enemyMine.health/enemyMineMaxHealth)*100) + '%' + '( -' + enemyHealthModifier + '! )';
                              + '<br /> Size: ' + enemyMine.size
                              + '<br /> Trigger: ' + enemyMine.trigger;
     
     activePlayerHealth = activePlayerHealth - enemyMine.power;
     playerBattleInfoDisplay.innerHTML =
-      'Current Health: ' + Math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '&percnt'
+      'Current Health: ' + Math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '%'
       + '( -' + enemyMine.power + '! )';
   }
 }

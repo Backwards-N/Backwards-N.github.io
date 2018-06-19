@@ -24,3 +24,5 @@ function useAffray(affray, level, grit, wep_power) {
   
   return Math.ceil(outputDamage);
 }
+
+var aggrieve = new smodAffray(40, 'melee', null, 'Aggrieve');

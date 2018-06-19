@@ -3,7 +3,11 @@ db = firebase.firestore();
 var choosePlayer = document.querySelector('#choosePlayer');
 var startStrife = document.querySelector('#startStrife');
 var playerDisplay = document.querySelector('#playerDisplay');
+var playerBattleInfoDisplay = document.querySelector('#pbInfoDisplay');
 var enemyDisplay = document.querySelector('#enemyDisplay');
+var activePlayerHealth = null;
+var activePlayerGrit = null;
+var activePlayerSpeed = null;
 
 function strifeSelect() {
   db.collection("players").where("owner", "==", userIdentifier)
@@ -54,6 +58,13 @@ function loadStrife() {
                           + '<br /> Bad Luck: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).badLuck, getAspectByID(workingData.aspect).badLuck, workingData.bad)
                           + '<br /> Stealth: ' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).stealth, getAspectByID(workingData.aspect).stealth, workingData.stlth)
                           + '<br /> Willpower:' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).willPower, getAspectByID(workingData.aspect).willPower, workingData.will);
+                      
+                        activePlayerHealth = (calculateStatAtLevel(workingData.level, getClassByID(workingData.class).gelViscosity, getAspectByID(workingData.aspect).gelViscosity, 0)) * 10;
+                        activePlayerGrit = calculateStatAtLevel(workingData.level, getClassByID(workingData.class).manGrit, getAspectByID(workingData.aspect).manGrit, workingData.grit);
+                        activePlayerSpeed = calculateStatAtLevel(workingData.level, getClassByID(workingData.class).speed, getAspectByID(workingData.aspect).speed, workingData.spd);
+                      
+                        playerBattleInfoDisplay.innerHTML =
+                        'Current Health: ' + activePlayerHealth;
                     });
                 })
                 .catch(function(error) {

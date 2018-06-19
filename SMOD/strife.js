@@ -62,12 +62,13 @@ function loadStrife() {
                           + '<br /> Willpower:' + calculateStatAtLevel(workingData.level, getClassByID(workingData.class).willPower, getAspectByID(workingData.aspect).willPower, workingData.will);
                       
                         activePlayerHealth = (calculateStatAtLevel(workingData.level, getClassByID(workingData.class).gelViscosity, getAspectByID(workingData.aspect).gelViscosity, 0)) * 10;
+                        activePlayerMaxHealth = (calculateStatAtLevel(workingData.level, getClassByID(workingData.class).gelViscosity, getAspectByID(workingData.aspect).gelViscosity, 0)) * 10;
                         activePlayerGrit = calculateStatAtLevel(workingData.level, getClassByID(workingData.class).manGrit, getAspectByID(workingData.aspect).manGrit, workingData.grit);
                         activePlayerSpeed = calculateStatAtLevel(workingData.level, getClassByID(workingData.class).speed, getAspectByID(workingData.aspect).speed, workingData.spd);
                         activePlayerLevel = workingData.level;
                       
                         playerBattleInfoDisplay.innerHTML =
-                        'Current Health: ' + activePlayerHealth;
+                        'Current Health: ' + math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '&percnt';
                     });
                 })
                 .catch(function(error) {
@@ -79,7 +80,7 @@ function advanceStrife() {
   if (enemyMine.speed > activePlayerSpeed) {
     activePlayerHealth = activePlayerHealth - enemyMine.power;
     playerBattleInfoDisplay.innerHTML =
-      'Current Health: ' + activePlayerHealth
+      'Current Health: ' + math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '&percnt'
       + '( -' + enemyMine.power + '! )';
     
     var enemyHealthModifier = useAffray(aggrieve, activePlayerLevel, activePlayerGrit, 2);
@@ -104,7 +105,7 @@ function advanceStrife() {
     
     activePlayerHealth = activePlayerHealth - enemyMine.power;
     playerBattleInfoDisplay.innerHTML =
-      'Current Health: ' + activePlayerHealth
+      'Current Health: ' + math.ceil((activePlayerHealth/activePlayerMaxHealth)*100) + '&percnt'
       + '( -' + enemyMine.power + '! )';
   }
 }

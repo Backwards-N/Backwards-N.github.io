@@ -30,7 +30,7 @@ function strifeSelect() {
 }
 
 $("#startStrife").on('click', loadStrife);
-$("#startStrife").on('click', advanceStrife);
+$("#aggrieve").on('click', advanceStrife);
 
 function loadStrife() {
   enemyMine = createUnderlingAtTiers(0, 1, null);

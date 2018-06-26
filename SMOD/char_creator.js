@@ -75,19 +75,7 @@ function logPlayer() {
         good: logGood,
         will: logWill,
         owner: userIdentifier,
-        level: 1,
-		time: 0,
-		space: 0,
-		void: logStlth,
-		light: logBad + logGood,
-		mind: 0,
-		heart: 0,
-		rage: logGrit,
-		hope: 0,
-		doom: 0,
-		life: 0,
-		blood: 0,
-		breath: logWill
+        level: 1
     })
     .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);

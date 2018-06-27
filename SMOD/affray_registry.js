@@ -1,10 +1,12 @@
 // Definitions.
 
-function smodAffray(pwr, typ, special_fx, special_internal_name) {
-  this.power = pwr;
-  this.type = typ;
-  this.sfx = special_fx;
-  this.sin = special_internal_name;
+class smodAffray {
+  constructor(pwr, typ, special_fx, special_internal_name) {
+    this.power = pwr;
+    this.type = typ;
+    this.sfx = special_fx;
+    this.sin = special_internal_name;
+  }
 }
 
 function useAffray(affray, level, grit, wep_power) {

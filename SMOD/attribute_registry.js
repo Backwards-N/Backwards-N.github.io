@@ -5,6 +5,7 @@ class smodAttribute {
   }
   
   trigger() {console.log(this.sin + ' has been triggered!');}
+  update() {}
   attack() {console.log(this.sin + ' has been triggered!');}
   onDie() {console.log(this.sin + ' has been triggered!');}
   onHit() {console.log(this.sin + ' has been triggered!');}
@@ -34,6 +35,9 @@ class deaconAttribute extends smodAttribute {
   trigger() {
     console.log('DQ0N has arrived.');
     super.trigger();
+  }
+  update() {
+    super.update();
   }
   attack() {
     console.log('DQ0N has arrived.');

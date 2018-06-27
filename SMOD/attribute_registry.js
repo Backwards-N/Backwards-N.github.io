@@ -52,7 +52,45 @@ class deaconAttribute extends smodAttribute {
 var deacon = new deaconAttribute('Deacon');
 deaconArray.push(deacon);
 
-// Attributes.
+// Neutral Attributes.
+
+
+// Time Attributes.
+
+
+// Space Attributes.
+
+
+// Light Attributes.
+
+
+// Void Attributes.
+
+
+// Mind Attributes.
+
+
+// Heart Attributes.
+
+
+// Rage Attributes.
+
+
+// Hope Attributes.
+
+
+// Doom Attributes.
+
+
+// Life Attributes.
+
+
+// Blood Attributes.
+
+
+// Breath Attributes.
+
+
 
 // Final array, do not change.
 

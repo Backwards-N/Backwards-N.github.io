@@ -64,16 +64,24 @@ function logPlayer() {
     window.alert('Player added.');
     
     db.collection("players").add({
-        name: logName, 
+        name: logName,
+        chand: null,
         gender: logGender,
         class: logClass,
         aspect: logAspect,
+        moon: false,
+        land: [0, 0],
+        cnsrt: [0, 0],
+        denizen: 0,
         grit: logGrit,
         spd: logSpd,
         stlth: logStlth,
         bad: logBad,
         good: logGood,
         will: logWill,
+        chrg: [0,0,0,0,0,0,0,0,0,0,0,0],
+        clth: [0, 0, 0, 0, 0, 0, 0, 0],
+        color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
         owner: userIdentifier,
         level: 1
     })
@@ -135,11 +143,11 @@ function classUpdate() {
     } else if (cDrop.value == 11) {
         cBox.textContent = "Bards have the most variety of ability with their aspect but the least control over how their aspect effects them. Their ability works through inviting destruction around them. This allows them to closely mimic the effects of other classes and at times, other aspects. Bards gain no boost.";
     } else if (cDrop.value == 12) {
-        cBox.textContent = "Princes always completely invert their aspect, giving them abilites that match those of no other class or aspect. They gain more of their inverted aspect by destroying their original aspect. Ideally this allows them to rise in power as they attack. Princes are negatively affected in the stats that their aspect boosts.";
+        cBox.textContent = "Princes completely invert their aspect, giving them abilites that match those of no other class or aspect. They gain more of their inverted aspect by destroying their original aspect. Ideally this allows them to rise in power as they attack. Princes are negatively affected in the stats that their aspect boosts.";
     } else if (cDrop.value == 13) {
-        cBox.textContent = "Lords ";
+        cBox.textContent = "Lords directly command their aspect and their aspect serves them. However, they have little ability to enforce their aspect upon others.";
     } else if (cDrop.value == 14) {
-        cBox.textContent = "Muses ";
+        cBox.textContent = "Muses draw their aspect forth on a large scale, inspiring it in everything they touch and everyone they meet. However, they have little ability to control their aspect, instead having to rely on passive effects.";
     } else {
         cBox.textContent = "Oops, you broke the class box.";
         console.error("Class not found.");

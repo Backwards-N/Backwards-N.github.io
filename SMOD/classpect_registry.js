@@ -1,25 +1,29 @@
 //TODO: add comments
 
-function smodClass(grit, spd, stlth, will, gluk, bluk, vis, special_internal_name) {
-    this.manGrit = grit;
-    this.speed = spd;
-    this.stealth = stlth;
-    this.willPower = will;
-    this.goodLuck = gluk;
-    this.badLuck = bluk;
-    this.gelViscosity = vis;
-    this.sin = special_internal_name;
+class smodClass {
+    constructor(grit, spd, stlth, will, gluk, bluk, vis, special_internal_name) {
+        this.manGrit = grit;
+        this.speed = spd;
+        this.stealth = stlth;
+        this.willPower = will;
+        this.goodLuck = gluk;
+        this.badLuck = bluk;
+        this.gelViscosity = vis;
+        this.sin = special_internal_name;
+    }
 }
 
-function smodAspect(grit, spd, stlth, will, gluk, bluk, vis, special_internal_name) {
-    this.manGrit = grit;
-    this.speed = spd;
-    this.stealth = stlth;
-    this.willPower = will;
-    this.goodLuck = gluk;
-    this.badLuck = bluk;
-    this.gelViscosity = vis;
-    this.sin = special_internal_name;
+class smodAspect {
+    constructor(grit, spd, stlth, will, gluk, bluk, vis, special_internal_name) {
+        this.manGrit = grit;
+        this.speed = spd;
+        this.stealth = stlth;
+        this.willPower = will;
+        this.goodLuck = gluk;
+        this.badLuck = bluk;
+        this.gelViscosity = vis;
+        this.sin = special_internal_name;
+    }
 }
 
 function calculateStatAtLevel(level, c, a, m) {

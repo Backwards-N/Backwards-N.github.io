@@ -4,6 +4,7 @@
         <meta charset="utf-8">
             <title>Create A Player</title>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src=master_registry.js></script>
             <link rel="stylesheet" href="../style.css">
       <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
                 <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
@@ -41,8 +42,7 @@
         initApp()
       });
     </script>
-    <script src=classpect_registry.js></script>
-    <script src=char_creator.js defer="defer"></script>
+    <script src=char_creator.js></script>
   </head>
   <body>
     <div>
@@ -59,7 +59,16 @@
                 </div><div>
                 <p class='creatorMenu'>Enter name: <input type="text" id="playerName" name="name">
                 <input type="radio" class="playerGender" name="gender" value="0" id="femaleGender">Female
-                <input type="radio" class="playerGender" name="gender" value="1" id="maleGender">Male</p>
+                <input type="radio" class="playerGender" name="gender" value="1" id="maleGender">Male
+                <input type="radio" class="playerGender" name="gender" value="1" id="otherGender">Other
+                Chumhandle: <input type="text" id="playerName" name="name">
+                </p>
+                <p class='creatorMenu'>Moon:
+                <select id="moonDropdown" name="moon">
+                    <option value='false'>Derse</option>
+                    <option value='true'>Prospit</option>
+                </select>
+                </p>
                 <p class='creatorMenu'>Class:
                 <select id="classDropdown" name="class">
                     <option value='1'>Rouge</option>

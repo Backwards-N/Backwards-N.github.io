@@ -1,25 +1,29 @@
 // Definitions.
 
-function smodConstruct(pow, spd, stlth, hlth, trg, siz, tier, special_internal_name) {
-    this.power = pow;
-    this.speed = spd;
-    this.stealth = stlth;
-    this.health = hlth;
-    this.trigger = trg;
-    this.size = siz;
-    this.encounterTier = tier;
-    this.sin = special_internal_name;
+class smodConstruct {
+    constructor(pow, spd, stlth, hlth, trg, siz, tier, special_internal_name) {
+        this.power = pow;
+        this.speed = spd;
+        this.stealth = stlth;
+        this.health = hlth;
+        this.trigger = trg;
+        this.size = siz;
+        this.encounterTier = tier;
+        this.sin = special_internal_name;
+    }
 }
 
-function gristType(pow, spd, stlth, hlth, trg, tier, scl, special_internal_name) {
-    this.power = pow;
-    this.speed = spd;
-    this.stealth = stlth;
-    this.health = hlth;
-    this.trigger = trg;
-    this.gristTier = tier;
-    this.gristScale = scl;
-    this.sin = special_internal_name;
+class gristType {
+    constructor(pow, spd, stlth, hlth, trg, tier, scl, special_internal_name) {
+        this.power = pow;
+        this.speed = spd;
+        this.stealth = stlth;
+        this.health = hlth;
+        this.trigger = trg;
+        this.gristTier = tier;
+        this.gristScale = scl;
+        this.sin = special_internal_name;
+    }
 }
 
 // Strife functions.

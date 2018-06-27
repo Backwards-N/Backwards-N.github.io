@@ -80,7 +80,7 @@ class artifactAttribute extends smodAttribute {
   }
 }
 
-var artifact = new atrifactAttribute('Artifact');
+var artifact = new artifactAttribute('Artifact');
 neutralArray.push(artifact);
 
 class plushAttribute extends smodAttribute {

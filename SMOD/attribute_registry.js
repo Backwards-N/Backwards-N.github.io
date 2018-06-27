@@ -430,12 +430,12 @@ class magnetAttribute extends smodAttribute {
 }
 
 var magnetOne = new magnetAttribute('Magnet I');
-var magnetOne = new magnetAttribute('Magnet II');
-var magnetOne = new magnetAttribute('Magnet III');
-var magnetOne = new magnetAttribute('Magnet IV');
-var magnetOne = new magnetAttribute('Magnet V');
-var magnetOne = new magnetAttribute('Magnet VI');
-var magnetOne = new magnetAttribute('Magnet VII');
+var magnetTwo = new magnetAttribute('Magnet II');
+var magnetThree = new magnetAttribute('Magnet III');
+var magnetFour = new magnetAttribute('Magnet IV');
+var magnetFive = new magnetAttribute('Magnet V');
+var magnetSix = new magnetAttribute('Magnet VI');
+var magnetSeven = new magnetAttribute('Magnet VII');
 bloodArray.push(magnetOne, magnetTwo, magnetThree, magnetFour, magnetFive, magnetSix, magnetSeven);
 
 // Breath Attributes.
@@ -443,4 +443,4 @@ bloodArray.push(magnetOne, magnetTwo, magnetThree, magnetFour, magnetFive, magne
 
 // Final array, do not change.
 
-attributeArray.concat(timeArray, spaceArray, lightArray, voidArray, midArray, heartArray, rageArray, hopeArray, doomArray, lifeArray, bloodArray, breathArray);
+attributeArray.concat(neutralArray, timeArray, spaceArray, lightArray, voidArray, mindArray, heartArray, rageArray, hopeArray, doomArray, lifeArray, bloodArray, breathArray);

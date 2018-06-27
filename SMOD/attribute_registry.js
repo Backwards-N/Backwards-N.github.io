@@ -1,3 +1,4 @@
+// Definitions.
 class smodAttribute {
   constructor(special_internal_name) {
     this.sin = special_internal_name;
@@ -9,6 +10,22 @@ class smodAttribute {
   onHit() {console.log(this.sin + ' has been triggered!');}
 }
 
+var attributeArray = [];
+var deaconArray = [];
+var timeArray = [];
+var spaceArray = [];
+var lightArray = [];
+var voidArray = [];
+var mindArray = [];
+var heartArray = [];
+var rageArray = [];
+var hopeArray = [];
+var doomArray = [];
+var lifeArray = [];
+var bloodArray = [];
+var breathArray = [];
+
+// Example attribute, DO NOT ADD TO ARRAY.
 class deaconAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -33,3 +50,10 @@ class deaconAttribute extends smodAttribute {
 }
 
 var deacon = new deaconAttribute('Deacon');
+deaconArray.push(deacon);
+
+// Attributes.
+
+// Final array, do not change.
+
+attributeArray.concat(timeArray, spaceArray, lightArray, voidArray, midArray, heartArray, rageArray, hopeArray, doomArray, lifeArray, bloodArray, breathArray);

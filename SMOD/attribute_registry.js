@@ -3,10 +3,10 @@ class smodAttribute {
     this.sin = special_internal_name;
   }
   
-  trigger() {console.log(this.sin + 'has been triggered!');}
-  attack() {console.log(this.sin + 'has been triggered!');}
-  onDie() {console.log(this.sin + 'has been triggered!');}
-  onHit() {console.log(this.sin + 'has been triggered!');}
+  trigger() {console.log(this.sin + ' has been triggered!');}
+  attack() {console.log(this.sin + ' has been triggered!');}
+  onDie() {console.log(this.sin + ' has been triggered!');}
+  onHit() {console.log(this.sin + ' has been triggered!');}
 }
 
 class deaconAttribute extends smodAttribute {

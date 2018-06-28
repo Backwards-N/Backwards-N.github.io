@@ -27,7 +27,10 @@ var bloodArray = [];
 var breathArray = [];
 var neutralArray = [];
 
+//-------------------------------------------
 // Example attribute, DO NOT ADD TO ARRAY.
+//-------------------------------------------
+
 class deaconAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -57,7 +60,10 @@ class deaconAttribute extends smodAttribute {
 var deacon = new deaconAttribute('Deacon');
 deaconArray.push(deacon);
 
+//-------------------------------------------
 // Neutral Attributes.
+//-------------------------------------------
+
 class artifactAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -130,8 +136,9 @@ class flammableAttribute extends smodAttribute {
   }
 }
 
+var inferno = new flammableAttribute('Inferno');
 var tinder = new flammableAttribute('Tinder');
-neutralArray.push(tinder);
+neutralArray.push(tinder, inferno);
 
 class glassAttribute extends smodAttribute {
   constructor(special_internal_name) {
@@ -209,7 +216,160 @@ class fragileAttribute extends smodAttribute {
 var brittle = new fragileAttribute('Brittle');
 neutralArray.push(brittle);
 
+class weatherAttribute extends smodAttribute {
+  constructor(special_internal_name) {
+    super(special_internal_name);
+  }
+  
+  trigger() {
+    super.trigger();
+  }
+  update() {
+    super.update();
+  }
+  attack() {
+    super.attack();
+  }
+  onDie() {
+    super.onDie();
+  }
+  onHit() {
+    super.onHit();
+  }
+}
+
+var rain = new weatherAttribute('Rain');
+neutralArray.push(rain);
+
+class animalAttribute extends smodAttribute {
+  constructor(special_internal_name) {
+    super(special_internal_name);
+  }
+  
+  trigger() {
+    super.trigger();
+  }
+  update() {
+    super.update();
+  }
+  attack() {
+    super.attack();
+  }
+  onDie() {
+    super.onDie();
+  }
+  onHit() {
+    super.onHit();
+  }
+}
+
+var feral = new artifactAttribute('Feral');
+neutralArray.push(feral);
+
+class magicAttribute extends smodAttribute {
+  constructor(special_internal_name) {
+    super(special_internal_name);
+  }
+  
+  trigger() {
+    super.trigger();
+  }
+  update() {
+    super.update();
+  }
+  attack() {
+    super.attack();
+  }
+  onDie() {
+    super.onDie();
+  }
+  onHit() {
+    super.onHit();
+  }
+}
+
+var magic = new magicAttribute('Magic');
+neutralArray.push(magic);
+
+class geoAttribute extends smodAttribute {
+  constructor(special_internal_name) {
+    super(special_internal_name);
+  }
+  
+  trigger() {
+    super.trigger();
+  }
+  update() {
+    super.update();
+  }
+  attack() {
+    super.attack();
+  }
+  onDie() {
+    super.onDie();
+  }
+  onHit() {
+    super.onHit();
+  }
+}
+
+var quartz = new geoAttribute('Quartz');
+neutralArray.push(quartz);
+
+class buildingAttribute extends smodAttribute {
+  constructor(special_internal_name) {
+    super(special_internal_name);
+  }
+  
+  trigger() {
+    super.trigger();
+  }
+  update() {
+    super.update();
+  }
+  attack() {
+    super.attack();
+  }
+  onDie() {
+    super.onDie();
+  }
+  onHit() {
+    super.onHit();
+  }
+}
+
+var house = new buildingAttribute('House');
+neutralArray.push(house);
+
+class landAttribute extends smodAttribute {
+  constructor(special_internal_name) {
+    super(special_internal_name);
+  }
+  
+  trigger() {
+    super.trigger();
+  }
+  update() {
+    super.update();
+  }
+  attack() {
+    super.attack();
+  }
+  onDie() {
+    super.onDie();
+  }
+  onHit() {
+    super.onHit();
+  }
+}
+
+var ocean = new landAttribute('Ocean');
+neutralArray.push(ocean);
+
+//-------------------------------------------
 // Time Attributes.
+//-------------------------------------------
+
 class musicAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -235,10 +395,15 @@ class musicAttribute extends smodAttribute {
 var musicBox = new musicAttribute('Music Box');
 timeArray.push(musicBox);
 
+//-------------------------------------------
 // Space Attributes.
+//-------------------------------------------
 
 
+//-------------------------------------------
 // Light Attributes.
+//-------------------------------------------
+
 class dramaticAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -290,13 +455,20 @@ class diceAttribute extends smodAttribute {
 var eightBall = new diceAttribute('8-Ball');
 lightArray.push(eightBall);
 
+//-------------------------------------------
 // Void Attributes.
+//-------------------------------------------
 
 
+//-------------------------------------------
 // Mind Attributes.
+//-------------------------------------------
 
 
+//-------------------------------------------
 // Heart Attributes.
+//-------------------------------------------
+
 class charmAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -347,7 +519,10 @@ class sodaAttribute extends smodAttribute {
 var soda = new sodaAttribute('Soda');
 heartArray.push(soda);
 
+//-------------------------------------------
 // Rage Attributes.
+//-------------------------------------------
+
 class angerAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -373,14 +548,20 @@ class angerAttribute extends smodAttribute {
 var anger = new angerAttribute('Anger');
 rageArray.push(anger);
 
-
+//-------------------------------------------
 // Hope Attributes.
+//-------------------------------------------
 
 
+//-------------------------------------------
 // Doom Attributes.
+//-------------------------------------------
 
 
+//-------------------------------------------
 // Life Attributes.
+//-------------------------------------------
+
 class woodAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -406,7 +587,10 @@ class woodAttribute extends smodAttribute {
 var wood = new woodAttribute('Wooden');
 lifeArray.push(wood);
 
+//-------------------------------------------
 // Blood Attributes.
+//-------------------------------------------
+
 class magnetAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
@@ -438,9 +622,13 @@ var magnetSix = new magnetAttribute('Magnet VI');
 var magnetSeven = new magnetAttribute('Magnet VII');
 bloodArray.push(magnetOne, magnetTwo, magnetThree, magnetFour, magnetFive, magnetSix, magnetSeven);
 
+//-------------------------------------------
 // Breath Attributes.
+//-------------------------------------------
 
 
+//-------------------------------------------
 // Final array, do not change.
+//-------------------------------------------
 
 attributeArray.concat(neutralArray, timeArray, spaceArray, lightArray, voidArray, mindArray, heartArray, rageArray, hopeArray, doomArray, lifeArray, bloodArray, breathArray);

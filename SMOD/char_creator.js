@@ -81,7 +81,7 @@ function logPlayer() {
         will: logWill,
         chrg: [0,0,0,0,0,0,0,0,0,0,0,0],
         clth: [0, 0, 0, 0, 0, 0, 0, 0],
-        color: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
+        color: ['yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy'],
         owner: userIdentifier,
         level: 1
     })

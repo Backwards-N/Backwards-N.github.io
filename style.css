@@ -54,7 +54,7 @@ div.standard {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  margin: 2em 5%;
+  margin: 2em 180px 0em 0%;
   padding: 1em 2em;
   overflow: hidden;
   font: normal 16px/1 "Liberation Mono", Liberation, monospace;

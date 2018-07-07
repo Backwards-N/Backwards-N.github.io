@@ -44,18 +44,25 @@
     </script>
   </head>
   <body>
-    <div>
+    <div class="sidenav">
+      <a href="#">Test 0</a>
+      <a href="#">Test 1</a>
+      <a href="#">Test 2</a>
+      <a href="#">Test 3</a>
+    </div>
+
+    <div class="topBar">
       <p>
-        <img class="logo" src="/images/furthest-ring-149.svg"> | 
-        <a href="https://backwards-n.github.io/index.html">Home</a> | 
-        <a href="https://backwards-n.github.io/sitewideaccview.html">Account</a> | 
+        <img class="logo" src="/images/furthest-ring-149.svg"> |
+        <a href="https://backwards-n.github.io/index.html">Home</a> |
+        <a href="https://backwards-n.github.io/sitewideaccview.html">Account</a> |
         <a href="https://backwards-n.github.io/SMOD/index.html">Project: SMOD</a> |
         <span id="account-details"></span>
       </p>
     </div>
-                <div><h1>Character Creator</h1>
+                <div class="standard"><h1>Character Creator</h1>
                 <p class='debugText'></p>
-                </div><div>
+              </div><div class="standard">
                 <p class='creatorMenu'>Enter name: <input type="text" id="playerName" name="name">
                 <input type="radio" class="playerGender" name="gender" value="0" id="femaleGender">Female
                 <input type="radio" class="playerGender" name="gender" value="1" id="maleGender">Male
@@ -85,7 +92,7 @@
                     <option value='13'>Lord</option>
                     <option value='14'>Muse</option>
                 </select>
-                Aspect: 
+                Aspect:
                 <select id="aspectDropdown" name="aspect">
                     <option value='1'>Time</option>
                     <option value='2'>Space</option>
@@ -103,14 +110,14 @@
                 </p>
                 <p id="classBox" class="info"></p>
                 <p id="aspectBox" class="info"></p>
-                </div><div><p class='creatorMenu'>
-                    
-                    
+              </div><div class="standard"><p class='creatorMenu'>
+
+
                     <!-- Forgive me. -->
-                    
-                    
-                    
-                    
+
+
+
+
                 <span id="rPoints"></span>
                 <br/>Mangrit:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="manGrit" name="grit"> <span id="gritSpan"></span>
                 <br/>Speed:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="speed" name="speed"><span id="spdSpan"></span>
@@ -120,12 +127,9 @@
                 <br/>Bad Luck:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" step="1" value="0" id="badLuck" name="bluck"><span id="badSpan"></span>
                 <br/>Gel Viscosity:&nbsp;<input disabled type="number" step="1" value="0" id="gelViscosity" name="gel"><span id="gelSpan"></span>
                 </p></div>
-          
-                <div><p><button type="button" id="addPlayer">Add Player</button></p></div>
+
+                <div class="standard"><p><button type="button" id="addPlayer">Add Player</button></p></div>
 
           <script src=char_creator.js defer></script>
         </body>
     </html>
-    
-    
-    

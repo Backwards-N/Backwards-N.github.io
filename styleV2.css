@@ -1,5 +1,13 @@
 a {
-  color: #CCBEC7;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+a:hover {
+    color: #f1f1f1;
 }
 
 /* The sidebar menu, change this soon. */
@@ -15,20 +23,6 @@ a {
     padding-top: 20px;
 }
 
-/* The navigation menu links */
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -39,33 +33,18 @@ a {
 .topBar{
   text-align: center;
   margin: 0em 0%;
-  padding: 0em 0em;
-  color: #242424;
-  background: #242424;
-  transition: background-color 3s ease 0s, color 3s ease 0s;
-}
-
-.topBar:hover{
+  padding: 1em 1em;
   color: #eeeeee;
   background: #444444;
 }
 
 div.standard {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
   margin: 2em 180px 0em 0%;
-  padding: 1em 2em;
-  overflow: hidden;
+  padding: 1em 1em;
   font: normal 16px/1 "Liberation Mono", Liberation, monospace;
   color: #eeeeee;
   text-align: left;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  background: #444444;
-  -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
-  box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+  background: #242424;
 }
 
 form {

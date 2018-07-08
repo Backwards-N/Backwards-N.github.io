@@ -9,6 +9,7 @@
     background-color: #131313; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 2%;
+    font: normal 16px/1 "Liberation Mono", Liberation, monospace;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -26,7 +27,7 @@
   background: #444444;
 }
 
-div.standard {
+.standard {
   margin: 2em 10em 0em 0%;
   padding: 1em 1em;
   font: normal 16px/1 "Liberation Mono", Liberation, monospace;
@@ -60,9 +61,8 @@ p.creatorMenu {
 }
 
 .logo {
-    width: 109%;
+    width: 100%;
     min-width: 2em;
-    max-width: 6em;
     vertical-align: middle;
 }
 

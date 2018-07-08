@@ -42,6 +42,7 @@ div.standard {
   color: #eeeeee;
   text-align: left;
   background: #242424;
+  border-bottom: 2px solid rgba(0, 0, 0, 1);
 }
 
 form {

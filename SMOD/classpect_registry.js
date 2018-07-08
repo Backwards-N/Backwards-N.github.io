@@ -28,7 +28,7 @@ class smodAspect {
 
 function calculateStatAtLevel(level, c, a, m) {
     stat = c+a+m;
-    
+
     if (stat > 0) {
         result = Math.floor((1/3*stat)*level+stat);
     } else if (stat == -1) {
@@ -41,7 +41,7 @@ function calculateStatAtLevel(level, c, a, m) {
         console.error("How did you even do this?");
         return 0;
     }
-    
+
     return result;
 }
 
@@ -62,7 +62,7 @@ function getClassByID(id) {
         13: lord,
         14: muse,
     })[id]||rouge);
-    
+
     return initClass;
 }
 
@@ -70,8 +70,8 @@ function getAspectByID(id) {
     initClass = (({
         1: time,
         2: space,
-        3: light,
-        4: smodVoid,
+        3: smodVoid,
+        4: light,
         5: mind,
         6: heart,
         7: rage,
@@ -81,7 +81,7 @@ function getAspectByID(id) {
         11: blood,
         12: breath,
     })[id]||smodVoid);
-    
+
     return initClass;
 }
 
@@ -112,4 +112,3 @@ var doom = new smodAspect(3,3,3,0,2,6,7,'Doom');
 var life = new smodAspect(-6,4,1,2,4,0,20,'Life');
 var blood = new smodAspect(4,2,2,0,-6,-3,12,'Blood');
 var breath = new smodAspect(0,5,0,-4,2,-2,9,'Breath');
-

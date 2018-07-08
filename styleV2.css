@@ -1,14 +1,14 @@
 /* The sidebar menu, change this soon. */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
+    width: 10%; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
-    left: calc(100% - 160px);
-    background-color: #111; /* Black */
+    left: 90%;
+    background-color: #131313; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+    padding-top: 2%;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -27,7 +27,7 @@
 }
 
 div.standard {
-  margin: 2em 180px 0em 0%;
+  margin: 2em 10em 0em 0%;
   padding: 1em 1em;
   font: normal 16px/1 "Liberation Mono", Liberation, monospace;
   color: #eeeeee;
@@ -64,6 +64,10 @@ p.creatorMenu {
     min-width: 2em;
     max-width: 6em;
     vertical-align: middle;
+}
+
+input[type=number]{
+    width: 3em;
 }
 
 a {

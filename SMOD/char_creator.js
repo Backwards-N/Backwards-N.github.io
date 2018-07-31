@@ -98,7 +98,7 @@ function logPlayer() {
 
     db.collection("players").add({
         name: logName, // Player name, retrieved from text entry.
-        chand: null, // Player chat handle, retrieved from text entry.
+        chand: logHandle, // Player chat handle, retrieved from text entry.
         gender: logGender, // Player gender, retrieved from radio button.
         class: logClass, // Player class, retrieved from dropdown.
         aspect: logAspect, // Player aspect, retrieved from dropdown.
@@ -252,7 +252,7 @@ function moonUpdate() {
 
 // Retrieves chat handle of the player.
 function handleUpdate() {
-  var internalName = chatHandle.value;
+  var internalHandle = chatHandle.value;
 
   return internalHandle;
 }

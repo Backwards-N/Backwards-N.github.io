@@ -3,6 +3,7 @@
 var debugText = document.querySelector('.debugText');
 var creatorMenu = document.querySelector('.creatorMenu');
 var playerName = document.querySelector('#playerName');
+var chatHandle = document.querySelector('#chatHandle');
 
 // Meta stuff. Reminder to place elsewhere.
 
@@ -23,10 +24,12 @@ if (debug === true) {
 
 // Setup click/change events, all should be 'updateUpdate' unless specified otherwise.
 
-$("#nameSubmit").on('click', updateUpdate);
+$("#playerName").on('change', updateUpdate);
 $(".playerGender").on('click', updateUpdate);
 $("#classDropdown").on('change', updateUpdate);
 $("#aspectDropdown").on('change', updateUpdate);
+$(".dreamMoon").on('click', updateUpdate);
+$("#chatHandle").on('change', updateUpdate);
 $("#manGrit").on('change', updateUpdate);
 $("#speed").on('change', updateUpdate);
 $("#stealth").on('change', updateUpdate);
@@ -34,7 +37,7 @@ $("#badLuck").on('change', updateUpdate);
 $("#goodLuck").on('change', updateUpdate);
 $("#gelViscosity").on('change', updateUpdate);
 $("#willPower").on('change', updateUpdate);
-$("#addPlayer").on('click', logPlayer)
+$("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 
 // Runs all updates. Reminder to specialize, we don't want cross contamination.
 
@@ -47,8 +50,12 @@ function updateUpdate() {
 
     // Run updates.
 
+    nameUpdate();
+    genderUpdate();
     aspectUpdate();
     classUpdate();
+    moonUpdate();
+    handleUpdate();
     var maxINum = gritUpdate() + spdUpdate() + stlthUpdate() - badUpdate() + goodUpdate() + willUpdate(); // Points remaining, only applies to character creator, don't bother in other.
     gelUpdate();
 
@@ -76,6 +83,8 @@ function logPlayer() {
     logGender = genderUpdate();
     logClass = classUpdate();
     logAspect = aspectUpdate();
+    logMoon = moonUpdate();
+    logHandle = handleUpdate();
     logGrit = gritUpdate();
     logSpd = spdUpdate();
     logStlth = stlthUpdate();
@@ -93,11 +102,11 @@ function logPlayer() {
         gender: logGender, // Player gender, retrieved from radio button.
         class: logClass, // Player class, retrieved from dropdown.
         aspect: logAspect, // Player aspect, retrieved from dropdown.
-        moon: false, // Dream moon, retrieved from dropdown.
+        moon: logMoon, // Dream moon, retrieved from radio button.
         land: [0, 0], // Land array, retrieved from categorizer. Order unimportant.
         cnsrt: [0, 0], // Consort array, retrieved from categorizer. Personality, type.
         denizen: 0, // Player denizen, retrieved from selection wheel.
-        stats: [logGrit, logSpd, logStlth, logBad, logGood, logWill] // Stats array, retrieved from numerical entries. Mangrit, speed, stealth, bad luck, good luck, willpower.
+        stats: [logGrit, logSpd, logStlth, logBad, logGood, logWill], // Stats array, retrieved from numerical entries. Mangrit, speed, stealth, bad luck, good luck, willpower.
         chrg: [0,0,0,0,0,0,0,0,0,0,0,0], // Player aspect charge array, calculated from other factors. Aspect order.
         clth: [0, 0, 0, 0, 0, 0, 0, 0], // Player clothing array, retrieved from categorizer. Reminder to choose order.
         color: ['yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy'], // Player clothing color array, retrieved from color picker. Order is the same as above.
@@ -222,6 +231,30 @@ function aspectUpdate() {
 
     // Return the aspect id, whether or not its valid.
     return parseInt(aDrop.value);
+}
+
+// Retrieves the dream moon of the player as a boolean.
+function moonUpdate() {
+  var internalMoon = false;
+
+  // Check each gender button to see if one is checked.
+  if (document.getElementById("prospitMoon").checked){
+      internalGender = true;
+  } else if (document.getElementById("derseMoon").checked) {
+      internalGender = false;
+  } else {
+      console.error("Oops, looks like you broke the moon buttons.");
+      internalGender = false;
+  }
+
+  return internalMoon;
+}
+
+// Retrieves chat handle of the player.
+function handleUpdate() {
+  var internalName = chatHandle.value;
+
+  return internalHandle;
 }
 
 /*

@@ -111,7 +111,8 @@ function logPlayer() {
         clth: [0, 0, 0, 0, 0, 0, 0, 0], // Player clothing array, retrieved from categorizer. Reminder to choose order.
         color: ['yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy'], // Player clothing color array, retrieved from color picker. Order is the same as above.
         owner: userIdentifier, // Player owner, retrieved from firebase.
-        level: 1 // Player level, always set to 1.
+        level: 1, // Player level, always set to 1.
+        vers: VERSION // Player version, always set to the version constant defined in version registry.
     })
     .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);

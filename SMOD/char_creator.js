@@ -4,7 +4,7 @@ var playerName = document.querySelector('#playerName');
 
 var db = firebase.firestore();
 var version = "v1.1";
-var debug = false;
+var debug = true;
 
 updateUpdate();
 
@@ -31,21 +31,21 @@ $("#addPlayer").on('click', logPlayer)
 function updateUpdate() {
     var megaBox = document.querySelector('#rPoints');
     var subButt = document.querySelector('#addPlayer');
-    
+
     aspectUpdate();
     classUpdate();
     var maxINum = gritUpdate() + spdUpdate() + stlthUpdate() - badUpdate() + goodUpdate() + willUpdate();
     gelUpdate();
-    
+
     var remPoi = 5 - maxINum;
     megaBox.textContent = "Points remaining:" + remPoi;
-    
+
     if(remPoi >= 0){
         subButt.disabled=false;
     } else {
         subButt.disabled=true;
     }
-    
+
     return maxINum;
 }
 
@@ -60,9 +60,9 @@ function logPlayer() {
     logBad = badUpdate();
     logGood = goodUpdate();
     logWill = willUpdate();
-    
+
     window.alert('Player added.');
-    
+
     db.collection("players").add({
         name: logName,
         chand: null,
@@ -96,13 +96,13 @@ function logPlayer() {
 function nameUpdate() {
     var internalName = playerName.value;
     console.log('This is the story of ' + internalName);
-    
+
     return internalName;
 }
 
 function genderUpdate() {
     var internalGender = 0;
-    
+
     if (document.getElementById("femaleGender").checked){
         internalGender = 0;
     } else if (document.getElementById("maleGender").checked) {
@@ -112,16 +112,16 @@ function genderUpdate() {
         internalGender = 0;
     }
     //console.log(internalGender);
-    
+
     return internalGender;
 }
 
 function classUpdate() {
     var cDrop = document.querySelector('#classDropdown');
     var cBox = document.querySelector('#classBox');
-    
+
     if (cDrop.value == 1) {
-        cBox.textContent = "Rouges steal their aspect and redistrbute it throughout their entire team. They serve to even the field, ensuring that every person on thier team has equal advantage. Rouges gain a natural bonus to their stealth.";   
+        cBox.textContent = "Rouges steal their aspect and redistrbute it throughout their entire team. They serve to even the field, ensuring that every person on thier team has equal advantage. Rouges gain a natural bonus to their stealth.";
     } else if (cDrop.value == 2) {
         cBox.textContent = "Thieves steal their aspect and keep it all to themselves. They can become very powerful players able to outcompete other players and their enemies in one particular category while maintaining normal usage of other categories. Thieves gain a natural bonus to their stealth.";
     } else if (cDrop.value == 3) {
@@ -152,14 +152,14 @@ function classUpdate() {
         cBox.textContent = "Oops, you broke the class box.";
         console.error("Class not found.");
     }
-    
+
     return parseInt(cDrop.value);
 }
 
 function aspectUpdate() {
     var aDrop = document.querySelector('#aspectDropdown');
     var aBox = document.querySelector('#aspectBox');
-    
+
     if (aDrop.value == 1) {
         aBox.textContent = "Time is one of the two aspects present in any successful session, the other being space. Time is associated with absolute destruction and perfect loops of events. Time players tend to have an easy time getting around, this is balanced out by having difficult to navigate lands. In a pre-scratch session the time player posesses a scratch construct. This is a massive instrument that, in combination with the aspect of space, is capable of resetting an entire session with different starting conditions.";
     } else if (aDrop.value == 2) {
@@ -196,9 +196,9 @@ function aspectUpdate() {
         aBox.textContent = "Oops, you broke the aspect box.";
         console.error("Aspect not found.");
     }
-    
+
     return parseInt(aDrop.value);
-}    
+}
 
 function gritUpdate() {
     var iClass = classUpdate();
@@ -207,7 +207,7 @@ function gritUpdate() {
     var aStat = 0;
     var iNum = parseInt(document.querySelector('#manGrit').value);
     var iBox = document.querySelector('#gritSpan');
-    
+
     if (iClass == 1) {
         cStat = rouge.manGrit;
     } else if (iClass == 2) {
@@ -239,7 +239,7 @@ function gritUpdate() {
     } else {
         console.error("Class could not be found for STAT update.");
     }
-    
+
     if (iAspect == 1) {
         aStat = time.manGrit;
     } else if (iAspect == 2) {
@@ -267,9 +267,9 @@ function gritUpdate() {
     } else {
         console.error("Aspect could not be found for STAT update.")
     }
-    
+
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,iNum)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,iNum);
-    
+
     return iNum;
 }
 
@@ -281,7 +281,7 @@ function spdUpdate() {
     var aStat = 0;
     var iNum = parseInt(document.querySelector('#speed').value);
     var iBox = document.querySelector('#spdSpan');
-    
+
     if (iClass == 1) {
         cStat = rouge.speed;
     } else if (iClass == 2) {
@@ -313,7 +313,7 @@ function spdUpdate() {
     } else {
         console.error("Class could not be found for STAT update.");
     }
-    
+
     if (iAspect == 1) {
         aStat = time.speed;
     } else if (iAspect == 2) {
@@ -341,9 +341,9 @@ function spdUpdate() {
     } else {
         console.error("Aspect could not be found for STAT update.")
     }
-    
+
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,iNum)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,iNum);
-    
+
     return iNum;
 }
 
@@ -354,7 +354,7 @@ function stlthUpdate() {
     var aStat = 0;
     var iNum = parseInt(document.querySelector('#stealth').value);
     var iBox = document.querySelector('#stlthSpan');
-    
+
     if (iClass == 1) {
         cStat = rouge.stealth;
     } else if (iClass == 2) {
@@ -386,7 +386,7 @@ function stlthUpdate() {
     } else {
         console.error("Class could not be found for STAT update.");
     }
-    
+
     if (iAspect == 1) {
         aStat = time.stealth;
     } else if (iAspect == 2) {
@@ -414,7 +414,7 @@ function stlthUpdate() {
     } else {
         console.error("Aspect could not be found for STAT update.")
     }
-    
+
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,iNum)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,iNum);
     return iNum;
 }
@@ -426,7 +426,7 @@ function badUpdate() {
     var aStat = 0;
     var iNum = parseInt(document.querySelector('#badLuck').value);
     var iBox = document.querySelector('#badSpan');
-    
+
     if (iClass == 1) {
         cStat = rouge.badLuck;
     } else if (iClass == 2) {
@@ -458,7 +458,7 @@ function badUpdate() {
     } else {
         console.error("Class could not be found for STAT update.");
     }
-    
+
     if (iAspect == 1) {
         aStat = time.badLuck;
     } else if (iAspect == 2) {
@@ -486,7 +486,7 @@ function badUpdate() {
     } else {
         console.error("Aspect could not be found for STAT update.")
     }
-    
+
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,iNum)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,iNum);
     return iNum;
 }
@@ -498,7 +498,7 @@ function goodUpdate() {
     var aStat = 0;
     var iNum = parseInt(document.querySelector('#goodLuck').value);
     var iBox = document.querySelector('#goodSpan');
-    
+
     if (iClass == 1) {
         cStat = rouge.goodLuck;
     } else if (iClass == 2) {
@@ -530,7 +530,7 @@ function goodUpdate() {
     } else {
         console.error("Class could not be found for STAT update.");
     }
-    
+
     if (iAspect == 1) {
         aStat = time.goodLuck;
     } else if (iAspect == 2) {
@@ -558,7 +558,7 @@ function goodUpdate() {
     } else {
         console.error("Aspect could not be found for STAT update.")
     }
-    
+
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,iNum)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,iNum);
     return iNum;
 }
@@ -569,7 +569,7 @@ function gelUpdate() {
     var cStat = 0;
     var aStat = 0;
     var iBox = document.querySelector('#gelSpan');
-    
+
     if (iClass == 1) {
         cStat = rouge.gelViscosity;
     } else if (iClass == 2) {
@@ -601,7 +601,7 @@ function gelUpdate() {
     } else {
         console.error("Class could not be found for STAT update.");
     }
-    
+
     if (iAspect == 1) {
         aStat = time.gelViscosity;
     } else if (iAspect == 2) {
@@ -629,7 +629,7 @@ function gelUpdate() {
     } else {
         console.error("Aspect could not be found for STAT update.")
     }
-    
+
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,0)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,0);
 }
 
@@ -640,7 +640,7 @@ function willUpdate() {
     var aStat = 0;
     var iNum = parseInt(document.querySelector('#willPower').value);
     var iBox = document.querySelector('#willSpan');
-    
+
     if (iClass == 1) {
         cStat = rouge.willPower;
     } else if (iClass == 2) {
@@ -672,7 +672,7 @@ function willUpdate() {
     } else {
         console.error("Class could not be found for STAT update.");
     }
-    
+
     if (iAspect == 1) {
         aStat = time.willPower;
     } else if (iAspect == 2) {
@@ -700,10 +700,7 @@ function willUpdate() {
     } else {
         console.error("Aspect could not be found for STAT update.")
     }
-    
+
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,iNum)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,iNum);
     return iNum;
 }
-
-
-

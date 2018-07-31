@@ -239,12 +239,12 @@ function moonUpdate() {
 
   // Check each gender button to see if one is checked.
   if (document.getElementById("prospitMoon").checked){
-      internalGender = true;
+      internalMoon = true;
   } else if (document.getElementById("derseMoon").checked) {
-      internalGender = false;
+      internalMoon = false;
   } else {
       console.error("Oops, looks like you broke the moon buttons.");
-      internalGender = false;
+      internalMoon = false;
   }
 
   return internalMoon;

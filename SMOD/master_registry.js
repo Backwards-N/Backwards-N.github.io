@@ -1,4 +1,4 @@
-const VERSION = '0.5r'
+const VERSION = '0.7r'
 
 $.getScript("https://backwards-n.js.org/SMOD/data_management.js", function() {
    console.log("Script loaded but not necessarily executed.");

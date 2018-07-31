@@ -8,7 +8,7 @@ var chatHandle = document.querySelector('#chatHandle');
 // Meta stuff. Reminder to place elsewhere.
 
 var db = firebase.firestore();
-var version = "v1.1";
+var version = VERSION;
 var debug = true;
 
 // Runs all updates. Reminder to specialize, we don't want cross contamination.
@@ -16,7 +16,7 @@ updateUpdate();
 
 // Checks if debug mode. Part of meta stuff. Reminder to build actual debug functionality for SMOD-XP.
 if (debug === true) {
-    debugText.textContent = "This is an experimental version of this page. Do not expect this page to be compatible with the rest of the project. Please report all bugs to aftermathCosmos on tumblr.";
+    debugText.textContent = "This is an experimental version of this page. Do not expect this page to be compatible with the rest of the project. Please report all bugs to Backwards-N on tumblr. This is version " + VERSION;
     debugText.style.backgroundColor = 'Firebrick';
 } else {
     debugText.textContent = version;

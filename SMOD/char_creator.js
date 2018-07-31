@@ -1,13 +1,19 @@
+// Read document.
+
 var debugText = document.querySelector('.debugText');
 var creatorMenu = document.querySelector('.creatorMenu');
 var playerName = document.querySelector('#playerName');
+
+// Meta stuff. Reminder to place elsewhere.
 
 var db = firebase.firestore();
 var version = "v1.1";
 var debug = true;
 
+// Runs all updates. Reminder to specialize, we don't want cross contamination.
 updateUpdate();
 
+// Checks if debug mode. Part of meta stuff. Reminder to build actual debug functionality for SMOD-XP.
 if (debug === true) {
     debugText.textContent = "This is an experimental version of this page. Do not expect this page to be compatible with the rest of the project. Please report all bugs to aftermathCosmos on tumblr.";
     debugText.style.backgroundColor = 'Firebrick';
@@ -15,8 +21,10 @@ if (debug === true) {
     debugText.textContent = version;
 }
 
-$("#nameSubmit").on('click', nameUpdate);
-$(".playerGender").on('click', genderUpdate);
+// Setup click/change events, all should be 'updateUpdate' unless specified otherwise.
+
+$("#nameSubmit").on('click', updateUpdate);
+$(".playerGender").on('click', updateUpdate);
 $("#classDropdown").on('change', updateUpdate);
 $("#aspectDropdown").on('change', updateUpdate);
 $("#manGrit").on('change', updateUpdate);
@@ -28,14 +36,23 @@ $("#gelViscosity").on('change', updateUpdate);
 $("#willPower").on('change', updateUpdate);
 $("#addPlayer").on('click', logPlayer)
 
+// Runs all updates. Reminder to specialize, we don't want cross contamination.
+
 function updateUpdate() {
+
+    // Reads the document.
+
     var megaBox = document.querySelector('#rPoints');
     var subButt = document.querySelector('#addPlayer');
 
+    // Run updates.
+
     aspectUpdate();
     classUpdate();
-    var maxINum = gritUpdate() + spdUpdate() + stlthUpdate() - badUpdate() + goodUpdate() + willUpdate();
+    var maxINum = gritUpdate() + spdUpdate() + stlthUpdate() - badUpdate() + goodUpdate() + willUpdate(); // Points remaining, only applies to character creator, don't bother in other.
     gelUpdate();
+
+    // Updates the document based on points remaining.
 
     var remPoi = 5 - maxINum;
     megaBox.textContent = "Points remaining:" + remPoi;
@@ -46,10 +63,15 @@ function updateUpdate() {
         subButt.disabled=true;
     }
 
+    // ??? Reminder to change.
+
     return maxINum;
 }
 
 function logPlayer() {
+
+    // Reads the document and assigns the information there to variables, critical stage.
+
     logName = nameUpdate();
     logGender = genderUpdate();
     logClass = classUpdate();
@@ -61,29 +83,26 @@ function logPlayer() {
     logGood = goodUpdate();
     logWill = willUpdate();
 
-    window.alert('Player added.');
+    console.log('Player added.');
+
+    // Send information to the database, every line needs a comment.
 
     db.collection("players").add({
-        name: logName,
-        chand: null,
-        gender: logGender,
-        class: logClass,
-        aspect: logAspect,
-        moon: false,
-        land: [0, 0],
-        cnsrt: [0, 0],
-        denizen: 0,
-        grit: logGrit,
-        spd: logSpd,
-        stlth: logStlth,
-        bad: logBad,
-        good: logGood,
-        will: logWill,
-        chrg: [0,0,0,0,0,0,0,0,0,0,0,0],
-        clth: [0, 0, 0, 0, 0, 0, 0, 0],
-        color: ['yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy'],
-        owner: userIdentifier,
-        level: 1
+        name: logName, // Player name, retrieved from text entry.
+        chand: null, // Player chat handle, retrieved from text entry.
+        gender: logGender, // Player gender, retrieved from radio button.
+        class: logClass, // Player class, retrieved from dropdown.
+        aspect: logAspect, // Player aspect, retrieved from dropdown.
+        moon: false, // Dream moon, retrieved from dropdown.
+        land: [0, 0], // Land array, retrieved from categorizer. Order unimportant.
+        cnsrt: [0, 0], // Consort array, retrieved from categorizer. Personality, type.
+        denizen: 0, // Player denizen, retrieved from selection wheel.
+        stats: [logGrit, logSpd, logStlth, logBad, logGood, logWill] // Stats array, retrieved from numerical entries. Mangrit, speed, stealth, bad luck, good luck, willpower.
+        chrg: [0,0,0,0,0,0,0,0,0,0,0,0], // Player aspect charge array, calculated from other factors. Aspect order.
+        clth: [0, 0, 0, 0, 0, 0, 0, 0], // Player clothing array, retrieved from categorizer. Reminder to choose order.
+        color: ['yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy', 'yyy'], // Player clothing color array, retrieved from color picker. Order is the same as above.
+        owner: userIdentifier, // Player owner, retrieved from firebase.
+        level: 1 // Player level, always set to 1.
     })
     .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
@@ -93,20 +112,25 @@ function logPlayer() {
     });
 }
 
+// Retrives the name of the player.
 function nameUpdate() {
     var internalName = playerName.value;
-    console.log('This is the story of ' + internalName);
+    //console.log('This is the story of ' + internalName);
 
     return internalName;
 }
 
+// Retrives the gender of the player.
 function genderUpdate() {
     var internalGender = 0;
 
+    // Check each gender button to see if one is checked.
     if (document.getElementById("femaleGender").checked){
         internalGender = 0;
     } else if (document.getElementById("maleGender").checked) {
         internalGender = 1;
+    } else if (document.getElementById("otherGender").checked) {
+          internalGender = 2;
     } else {
         console.error("Oops, looks like you broke the gender buttons.");
         internalGender = 0;
@@ -116,10 +140,13 @@ function genderUpdate() {
     return internalGender;
 }
 
+// Retrieve class.
 function classUpdate() {
+    // Read document to find class dropdown and description box.
     var cDrop = document.querySelector('#classDropdown');
     var cBox = document.querySelector('#classBox');
 
+    // Check to see if the dropdown number matches an existing class id. If it does, change the text of the description box.
     if (cDrop.value == 1) {
         cBox.textContent = "Rouges steal their aspect and redistrbute it throughout their entire team. They serve to even the field, ensuring that every person on thier team has equal advantage. Rouges gain a natural bonus to their stealth.";
     } else if (cDrop.value == 2) {
@@ -153,13 +180,17 @@ function classUpdate() {
         console.error("Class not found.");
     }
 
+    // Return the class id, whether or not its valid.
     return parseInt(cDrop.value);
 }
 
+// Retrieve aspect.
 function aspectUpdate() {
+    // Read document to find aspect dropdown and description box.
     var aDrop = document.querySelector('#aspectDropdown');
     var aBox = document.querySelector('#aspectBox');
 
+    // Check to see if the dropdown number matches an existing aspect id. If it does, change the text of the description box.
     if (aDrop.value == 1) {
         aBox.textContent = "Time is one of the two aspects present in any successful session, the other being space. Time is associated with absolute destruction and perfect loops of events. Time players tend to have an easy time getting around, this is balanced out by having difficult to navigate lands. In a pre-scratch session the time player posesses a scratch construct. This is a massive instrument that, in combination with the aspect of space, is capable of resetting an entire session with different starting conditions.";
     } else if (aDrop.value == 2) {
@@ -184,30 +215,41 @@ function aspectUpdate() {
         aBox.textContent = "Blood is associated with teamwork and stability. Blood players are naturally competent at helping others through tough times. They tend to be highly task oriented.";
     } else if (aDrop.value == 12) {
         aBox.textContent = "Breath is associated with individuality and change. Breath players naturally posess the ability to help themselves through tough times. They tend to easily get distracted from the task at hand.";
-    } else if (aDrop.value == 13) {
-        aBox.textContent = "Scope is associated with knowledge and broad generalization. Scope players are good at leading large groups of people and tend to be quite organized. They also are naturally good at many things, but improve quite slowly.";
-    } else if (aDrop.value == 14) {
-        aBox.textContent = "Spheres is associated with skill and very fine specialization. Spheres players find it hard to resist focusing on something and not resting until it is acheived, as a result they tend to be quite unorganized. They also tend to have one aspect of themselves that they improve much faster than others.";
-    } else if (aDrop.value == 15) {
-        aBox.textContent = "Rule is associated with clarity and extreme absolutes. Rule players are stubborn and adhere strongly to their personal sense of moral justice. They posess extremely good abilities in some areas while performing extremely poorly in others.";
-    } else if (aDrop.value == 16) {
-        aBox.textContent = "Strife is associated with chaos and extreme changes. It is easy to change a strife player's opinion on a subject and they have little to no sense of morals. Their abilities change quickly, for better or worse.";
     } else {
         aBox.textContent = "Oops, you broke the aspect box.";
         console.error("Aspect not found.");
     }
 
+    // Return the aspect id, whether or not its valid.
     return parseInt(aDrop.value);
 }
 
+/*
+_____ _        _     _   _           _       _
+/  ___| |      | |   | | | |         | |     | |
+\ `--.| |_ __ _| |_  | | | |_ __   __| | __ _| |_ ___  ___
+`--. \ __/ _` | __| | | | | '_ \ / _` |/ _` | __/ _ \/ __|
+/\__/ / || (_| | |_  | |_| | |_) | (_| | (_| | ||  __/\__ \
+\____/ \__\__,_|\__|  \___/| .__/ \__,_|\__,_|\__\___||___/
+                          | |
+                          |_|
+
+All update functions until #STAT STOP work the same but for different purposes.
+*/
+
 function gritUpdate() {
+    // Retrieve class and aspect ids.
     var iClass = classUpdate();
     var iAspect = aspectUpdate();
+    // Initialize math.
     var cStat = 0;
     var aStat = 0;
+    // Read document to retrieve stat.
     var iNum = parseInt(document.querySelector('#manGrit').value);
+    // Read document to find numerical stat display.
     var iBox = document.querySelector('#gritSpan');
 
+    // Get class stat from id. Reminder to create function for this purpose.
     if (iClass == 1) {
         cStat = rouge.manGrit;
     } else if (iClass == 2) {
@@ -240,6 +282,7 @@ function gritUpdate() {
         console.error("Class could not be found for STAT update.");
     }
 
+    // Get aspect stat from id. Reminder to create function for this purpose.
     if (iAspect == 1) {
         aStat = time.manGrit;
     } else if (iAspect == 2) {
@@ -268,8 +311,10 @@ function gritUpdate() {
         console.error("Aspect could not be found for STAT update.")
     }
 
+    // Print stat to display.
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,iNum)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,iNum);
 
+    // Return base stat.
     return iNum;
 }
 
@@ -704,3 +749,5 @@ function willUpdate() {
     iBox.textContent = "Level 1: "+calculateStatAtLevel(1,cStat,aStat,iNum)+" | Level 176: "+calculateStatAtLevel(176,cStat,aStat,iNum);
     return iNum;
 }
+
+// #STAT STOP

@@ -6,7 +6,7 @@
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 90%;
-    background-color: #988FCF; /* Black */
+    background-color: #988FCF;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 2%;
     font: normal 16px/1 "Liberation Mono", Liberation, monospace;
@@ -24,16 +24,17 @@
   margin: 0em 0%;
   padding: 1em 1em;
   color: #131313;
-  background: #88A4C9;
+  background: #DDDDDF;
+  font: normal 16px/1 "Liberation Mono", Liberation, monospace;
 }
 
 .standard {
-  margin: 2em 10em 0em 0%;
+  margin: 2em 2em 0em 0%;
   padding: 1em 1em;
   font: normal 16px/1 "Liberation Mono", Liberation, monospace;
   color: #131313;
   text-align: left;
-  background: #C2BCE7;
+  background: #FAFAFF;
   border-bottom: 2px solid rgba(0, 0, 0, 1);
 }
 
@@ -85,5 +86,5 @@ a:hover {
 }
 
 body {
-  background-color: #C2BCE7;
+  background-color: #FAFAFF;
 }

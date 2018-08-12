@@ -25,6 +25,7 @@
   padding: 1em 1em;
   color: #eeeeee;
   background: #444444;
+  font: normal 16px/1 "Liberation Mono", Liberation, monospace;
 }
 
 .standard {

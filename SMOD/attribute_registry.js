@@ -3,7 +3,7 @@ class smodAttribute {
   constructor(special_internal_name) {
     this.sin = special_internal_name;
   }
-  
+
   trigger() {console.log(this.sin + ' has been triggered!');}
   update() {}
   attack() {console.log(this.sin + ' has been triggered!');}
@@ -35,7 +35,7 @@ class deaconAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     console.log('DQ0N has arrived.');
     super.trigger();
@@ -68,7 +68,7 @@ class artifactAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -93,7 +93,7 @@ class plushAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -118,7 +118,7 @@ class flammableAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -144,7 +144,7 @@ class glassAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -169,7 +169,7 @@ class humidAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -195,7 +195,7 @@ class fragileAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -220,7 +220,7 @@ class weatherAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -245,7 +245,7 @@ class animalAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -270,7 +270,7 @@ class magicAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -295,7 +295,7 @@ class geoAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -320,7 +320,7 @@ class buildingAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -345,7 +345,7 @@ class landAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -374,7 +374,7 @@ class musicAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -408,7 +408,7 @@ class dramaticAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     window.alert('The enemy is making a scene!');
     super.trigger();
@@ -434,7 +434,7 @@ class diceAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -473,7 +473,7 @@ class charmAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -498,7 +498,7 @@ class sodaAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -527,7 +527,7 @@ class angerAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -566,7 +566,7 @@ class woodAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -595,7 +595,7 @@ class magnetAttribute extends smodAttribute {
   constructor(special_internal_name) {
     super(special_internal_name);
   }
-  
+
   trigger() {
     super.trigger();
   }
@@ -631,4 +631,4 @@ bloodArray.push(magnetOne, magnetTwo, magnetThree, magnetFour, magnetFive, magne
 // Final array, do not change.
 //-------------------------------------------
 
-attributeArray.concat(neutralArray, timeArray, spaceArray, lightArray, voidArray, mindArray, heartArray, rageArray, hopeArray, doomArray, lifeArray, bloodArray, breathArray);
+attributeArray = attributeArray.concat(neutralArray, timeArray, spaceArray, lightArray, voidArray, mindArray, heartArray, rageArray, hopeArray, doomArray, lifeArray, bloodArray, breathArray);

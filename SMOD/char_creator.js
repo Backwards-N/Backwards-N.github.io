@@ -44,7 +44,7 @@ $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 
 for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
   if (cyc < 2) {
-    mag = attributeArray[i].sin + " ";
+    mag = mag + attributeArray[i].sin + " ";
     cyc++;
   } else if (cyc >= 2) {
     attCat.innerHTML = attCat.innerHTML + "<p>" + mag + "</p>";

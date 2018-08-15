@@ -43,9 +43,14 @@
   padding: 1em 1em;
   font: normal 16px/1 "Liberation Mono", Liberation, monospace;
   color: #eeeeee;
-  text-align: center;
   background: #242424;
   border-bottom: 2px solid rgba(0, 0, 0, 1);
+  display: inline-block;
+  display: -moz-inline-box;
+  *display: inline; /* For IE7 */
+  zoom: 1; /* Trigger hasLayout */
+  width: 33%;
+  text-align: center;
 }
 
 form {

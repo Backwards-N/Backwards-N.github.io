@@ -42,8 +42,8 @@ $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 
 // Create attribute categorizer.
 
-for (i = 0, l = attributeArray.length; i <= l; i++) {
-  attCat.innerHTML = attCat.innerHTML + "<p>a</p>";
+for (i = 0, l = attributeArray.length; i < l; i++) {
+  attCat.innerHTML = attCat.innerHTML + "<p>" + attributeArray[i].sin + "</p>";
 }
 
 

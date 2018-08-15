@@ -47,7 +47,7 @@ for (i = 0, cyc = 0, l = attributeArray.length; i < l; i++) {
     attCat.innerHTML = attCat.innerHTML + "<p>" + attributeArray[i].sin + " ";
     cyc++;
   } else if (cyc >= 2) {
-    attCat.innerHTML = attCat.innerHTML + attributeArray[i].sin "</p>";
+    attCat.innerHTML = attCat.innerHTML + attributeArray[i].sin + "</p>";
     cyc = 0;
   } else {
     console.log("Omae wa mou shindeiru.");

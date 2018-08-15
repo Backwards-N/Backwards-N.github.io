@@ -44,10 +44,10 @@ $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 
 for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
   if (cyc < 2) {
-    mag = mag + "<input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + " ";
+    mag = mag + "<div><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</div>";
     cyc++;
   } else if (cyc >= 2) {
-    mag = mag + "<input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + " ";
+    mag = mag + "<div><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</div>";
     attCat.innerHTML = attCat.innerHTML + "<p>" + mag + "</p>";
     cyc = 0;
     mag = "";

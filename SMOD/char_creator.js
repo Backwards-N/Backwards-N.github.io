@@ -42,11 +42,11 @@ $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 
 // Create attribute categorizer.
 
-for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i <= l; i++) {
-  if (cyc < 2 && i != l) {
+for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
+  if (cyc < 2 && i != l - 1) {
     mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
     cyc++;
-  } else if (cyc >= 2 || i == l) {
+  } else if (cyc >= 2 || i == l - 1) {
     mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
     attCat.innerHTML = attCat.innerHTML + "<p>" + mag + "</p>";
     cyc = 0;

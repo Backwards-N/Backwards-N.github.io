@@ -1,5 +1,6 @@
 // Read document.
 
+var attributeCategorizer = $('#attCat');
 var debugText = document.querySelector('.debugText');
 var creatorMenu = document.querySelector('.creatorMenu');
 var playerName = document.querySelector('#playerName');
@@ -38,6 +39,13 @@ $("#goodLuck").on('change', updateUpdate);
 $("#gelViscosity").on('change', updateUpdate);
 $("#willPower").on('change', updateUpdate);
 $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
+
+// Create attribute categorizer.
+
+for (i = 0, l = attributeArray.length; i =< l; i++) {
+  attCat.innerHTML = attCat.innerHTML + "<p>a</p>";
+}
+
 
 // Runs all updates. Reminder to specialize, we don't want cross contamination.
 

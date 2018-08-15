@@ -42,12 +42,12 @@ $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 
 // Create attribute categorizer.
 
-for (i = 0, cyc = 0, l = attributeArray.length; i < l; i++) {
+for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
   if (cyc < 2) {
-    attCat.innerHTML = attCat.innerHTML + "<p>" + attributeArray[i].sin + " ";
+    mag = attributeArray[i].sin + " ";
     cyc++;
   } else if (cyc >= 2) {
-    attCat.innerHTML = attCat.innerHTML + attributeArray[i].sin + "</p>";
+    attCat.innerHTML = attCat.innerHTML + "<p>" + mag + "</p>";
     cyc = 0;
   } else {
     console.log("Omae wa mou shindeiru.");

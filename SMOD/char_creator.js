@@ -31,6 +31,7 @@ if (debug === true) {
 $("#playerName").on('change', updateUpdate);
 $(".playerGender").on('click', updateUpdate);
 $("#classDropdown").on('change', updateUpdate);
+$("#aspectDropdown").on('change', constructLandCategorizer); // Must be constructLandCategorizer.
 $("#aspectDropdown").on('change', updateUpdate);
 $(".dreamMoon").on('click', updateUpdate);
 $("#chatHandle").on('change', updateUpdate);
@@ -47,12 +48,12 @@ $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 function constructLandCategorizer() {
   attCatPartOne.innerHTML = null;
 
-  for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
+  for (i = 0, cyc = 0, mag = "", l = getArrayByID(aspectUpdate).length; i < l; i++) {
     if (cyc < 4 && i != l - 1) {
-      mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+      mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + getArrayByID(aspectUpdate)[i].sin + "'>" + getArrayByID(aspectUpdate)[i].sin + "</span>";
       cyc++;
     } else if (cyc >= 4 || i == l - 1) {
-      mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+      mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + getArrayByID(aspectUpdate)[i].sin + "'>" + getArrayByID(aspectUpdate)[i].sin + "</span>";
       attCatPartOne.innerHTML = attCatPartOne.innerHTML + "<p>" + mag + "</p>";
       cyc = 0;
       mag = "";
@@ -312,7 +313,7 @@ function landUpdate() {
 
   for (var i = 0, length = oneAttributes.length; i < length; i++) {
       if (oneAttributes[i].checked) {
-      att1.innerHTML = attributeArray[oneAttributes[i].value].sid;
+      att1.innerHTML = getArrayByID(aspectUpdate)[oneAttributes[i].value].sid;
 
       break;
     }

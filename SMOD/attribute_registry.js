@@ -632,4 +632,24 @@ bloodArray.push(magnetOne, magnetTwo, magnetThree, magnetFour, magnetFive, magne
 // Final array, do not change.
 //-------------------------------------------
 
+function getArrayByID(id) {
+    initArray = (({
+        0: neutralArray,
+        1: timeArray,
+        2: spaceArray,
+        3: voidArray,
+        4: lightArray,
+        5: mindArray,
+        6: heartArray,
+        7: rageArray,
+        8: hopeArray,
+        9: doomArray,
+        10: lifeArray,
+        11: bloodArray,
+        12: breathArray,
+    })[id]||neutralArray);
+
+    return initArray;
+}
+
 attributeArray = attributeArray.concat(neutralArray, timeArray, spaceArray, lightArray, voidArray, mindArray, heartArray, rageArray, hopeArray, doomArray, lifeArray, bloodArray, breathArray);

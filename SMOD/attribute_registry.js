@@ -615,12 +615,12 @@ class magnetAttribute extends smodAttribute {
 }
 
 var magnetOne = new magnetAttribute('Magnet I', 'Lodestones');
-var magnetTwo = new magnetAttribute('Magnet II', 'Lodestones'));
-var magnetThree = new magnetAttribute('Magnet III', 'Lodestones'));
+var magnetTwo = new magnetAttribute('Magnet II', 'Lodestones');
+var magnetThree = new magnetAttribute('Magnet III', 'Lodestones');
 var magnetFour = new magnetAttribute('Magnet IV', 'Magnetism');
 var magnetFive = new magnetAttribute('Magnet V', 'Magnetism');
 var magnetSix = new magnetAttribute('Magnet VI', 'Magnetism');
-var magnetSeven = new magnetAttribute('Magnet VII', 'Magnetars'));
+var magnetSeven = new magnetAttribute('Magnet VII', 'Magnetars');
 bloodArray.push(magnetOne, magnetTwo, magnetThree, magnetFour, magnetFive, magnetSix, magnetSeven);
 
 //-------------------------------------------

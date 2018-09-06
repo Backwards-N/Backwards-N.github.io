@@ -49,7 +49,7 @@
   display: -moz-inline-box;
   *display: inline; /* For IE7 */
   zoom: 1; /* Trigger hasLayout */
-  width: 25%;
+  width: 15%;
   text-align: center;
 }
 

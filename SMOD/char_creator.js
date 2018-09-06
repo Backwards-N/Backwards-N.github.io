@@ -41,37 +41,44 @@ $("#gelViscosity").on('change', updateUpdate);
 $("#willPower").on('change', updateUpdate);
 $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 
-// Create attribute categorizer.
+// Create land attribute categorizer.
+function constructLandCategorizer() {
+  attCatPartOne.innerHTML = null;
 
-for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
-  if (cyc < 4 && i != l - 1) {
-    mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
-    cyc++;
-  } else if (cyc >= 4 || i == l - 1) {
-    mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
-    attCatPartOne.innerHTML = attCatPartOne.innerHTML + "<p>" + mag + "</p>";
-    cyc = 0;
-    mag = "";
-  } else {
-    console.log("Omae wa mou shindeiru.");
-    window.alert("NANI?!?!");
+  for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
+    if (cyc < 4 && i != l - 1) {
+      mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+      cyc++;
+    } else if (cyc >= 4 || i == l - 1) {
+      mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+      attCatPartOne.innerHTML = attCatPartOne.innerHTML + "<p>" + mag + "</p>";
+      cyc = 0;
+      mag = "";
+    } else {
+      console.log("Omae wa mou shindeiru.");
+      window.alert("NANI?!?!");
+    }
+  }
+
+  attCatPartTwo.innerHTML = null;
+
+  for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
+    if (cyc < 4 && i != l - 1) {
+      mag = mag + "<span><input type='radio' class='attributeButtonPartTwo' name='attribute2' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+      cyc++;
+    } else if (cyc >= 4 || i == l - 1) {
+      mag = mag + "<span><input type='radio' class='attributeButtonPartTwo' name='attribute2' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+      attCatPartTwo.innerHTML = attCatPartTwo.innerHTML + "<p>" + mag + "</p>";
+      cyc = 0;
+      mag = "";
+    } else {
+      console.log("Omae wa mou shindeiru.");
+      window.alert("NANI?!?!");
+    }
   }
 }
 
-for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
-  if (cyc < 4 && i != l - 1) {
-    mag = mag + "<span><input type='radio' class='attributeButtonPartTwo' name='attribute2' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
-    cyc++;
-  } else if (cyc >= 4 || i == l - 1) {
-    mag = mag + "<span><input type='radio' class='attributeButtonPartTwo' name='attribute2' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
-    attCatPartTwo.innerHTML = attCatPartTwo.innerHTML + "<p>" + mag + "</p>";
-    cyc = 0;
-    mag = "";
-  } else {
-    console.log("Omae wa mou shindeiru.");
-    window.alert("NANI?!?!");
-  }
-}
+constructLandCategorizer();
 
 // Runs all updates. Reminder to specialize, we don't want cross contamination.
 

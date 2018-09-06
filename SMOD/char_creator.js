@@ -307,8 +307,8 @@ function handleUpdate() {
 
 // Retrieves currently selected land attributes.
 function landUpdate() {
-  oneAttributes = $(input[name='attribute1']);
-  twoAttributes = $(input[name='attribute2']);
+  oneAttributes = document.getElementsByName('attribute1');
+  twoAttributes = document.getElementsByName('attribute2');
 
   for (var i = 0, length = oneAttributes.length; i < length; i++) {
       if (oneAttributes[i].checked) {

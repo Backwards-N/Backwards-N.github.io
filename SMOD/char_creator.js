@@ -49,7 +49,7 @@ for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
     cyc++;
   } else if (cyc >= 4 || i == l - 1) {
     mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
-    attributeCategorizerPartOne.innerHTML = attributeCategorizerPartOne.innerHTML + "<p>" + mag + "</p>";
+    attCatPartOne.innerHTML = attCatPartOne.innerHTML + "<p>" + mag + "</p>";
     cyc = 0;
     mag = "";
   } else {
@@ -64,7 +64,7 @@ for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
     cyc++;
   } else if (cyc >= 4 || i == l - 1) {
     mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
-    attributeCategorizerPartTwo.innerHTML = attributeCategorizerPartTwo.innerHTML + "<p>" + mag + "</p>";
+    attCatPartTwo.innerHTML = attCatPartTwo.innerHTML + "<p>" + mag + "</p>";
     cyc = 0;
     mag = "";
   } else {

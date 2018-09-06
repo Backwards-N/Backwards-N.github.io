@@ -45,10 +45,10 @@ $("#addPlayer").on('click', logPlayer) // Must be logPlayer.
 
 for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
   if (cyc < 4 && i != l - 1) {
-    mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+    mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
     cyc++;
   } else if (cyc >= 4 || i == l - 1) {
-    mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+    mag = mag + "<span><input type='radio' class='attributeButtonPartOne' name='attribute1' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
     attCatPartOne.innerHTML = attCatPartOne.innerHTML + "<p>" + mag + "</p>";
     cyc = 0;
     mag = "";
@@ -60,10 +60,10 @@ for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
 
 for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
   if (cyc < 4 && i != l - 1) {
-    mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+    mag = mag + "<span><input type='radio' class='attributeButtonPartTwo' name='attribute2' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
     cyc++;
   } else if (cyc >= 4 || i == l - 1) {
-    mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+    mag = mag + "<span><input type='radio' class='attributeButtonPartTwo' name='attribute2' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
     attCatPartTwo.innerHTML = attCatPartTwo.innerHTML + "<p>" + mag + "</p>";
     cyc = 0;
     mag = "";

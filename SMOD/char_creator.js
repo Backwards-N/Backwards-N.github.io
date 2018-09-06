@@ -1,6 +1,7 @@
 // Read document.
 
-var attributeCategorizer = $('#attCat');
+var attributeCategorizerPartOne = $('#attCatPartOne');
+var attributeCategorizerPartTwo = $('#attCatPartTwo');
 var debugText = document.querySelector('.debugText');
 var creatorMenu = document.querySelector('.creatorMenu');
 var playerName = document.querySelector('#playerName');
@@ -48,7 +49,7 @@ for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
     cyc++;
   } else if (cyc >= 4 || i == l - 1) {
     mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
-    attCat.innerHTML = attCat.innerHTML + "<p>" + mag + "</p>";
+    attributeCategorizerPartOne.innerHTML = attributeCategorizerPartOne.innerHTML + "<p>" + mag + "</p>";
     cyc = 0;
     mag = "";
   } else {
@@ -57,6 +58,20 @@ for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
   }
 }
 
+for (i = 0, cyc = 0, mag = "", l = attributeArray.length; i < l; i++) {
+  if (cyc < 4 && i != l - 1) {
+    mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+    cyc++;
+  } else if (cyc >= 4 || i == l - 1) {
+    mag = mag + "<span><input type='radio' class='attributeButton' name='attribute' value='" + i + "' id='" + attributeArray[i].sin + "'>" + attributeArray[i].sin + "</span>";
+    attributeCategorizerPartTwo.innerHTML = attributeCategorizerPartTwo.innerHTML + "<p>" + mag + "</p>";
+    cyc = 0;
+    mag = "";
+  } else {
+    console.log("Omae wa mou shindeiru.");
+    window.alert("NANI?!?!");
+  }
+}
 
 // Runs all updates. Reminder to specialize, we don't want cross contamination.
 

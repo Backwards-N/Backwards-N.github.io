@@ -1,7 +1,8 @@
 // Definitions.
 class smodAttribute {
-  constructor(special_internal_name) {
+  constructor(special_internal_name, special_internal_descriptor) {
     this.sin = special_internal_name;
+    this.sid = special_internal_descriptor;
   }
 
   trigger() {console.log(this.sin + ' has been triggered!');}
@@ -32,8 +33,8 @@ var neutralArray = [];
 //-------------------------------------------
 
 class deaconAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -65,8 +66,8 @@ deaconArray.push(deacon);
 //-------------------------------------------
 
 class artifactAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -90,8 +91,8 @@ var artifact = new artifactAttribute('Artifact');
 neutralArray.push(artifact);
 
 class plushAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -115,8 +116,8 @@ var plush = new plushAttribute('Plush');
 neutralArray.push(plush);
 
 class flammableAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -141,8 +142,8 @@ var tinder = new flammableAttribute('Tinder');
 neutralArray.push(tinder, inferno);
 
 class glassAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -166,8 +167,8 @@ var glass = new glassAttribute('Glass');
 neutralArray.push(glass);
 
 class humidAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -192,8 +193,8 @@ var dry = new humidAttribute('Dry');
 neutralArray.push(moist, dry);
 
 class fragileAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -217,8 +218,8 @@ var brittle = new fragileAttribute('Brittle');
 neutralArray.push(brittle);
 
 class weatherAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -242,8 +243,8 @@ var rain = new weatherAttribute('Rain');
 neutralArray.push(rain);
 
 class animalAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -267,8 +268,8 @@ var feral = new artifactAttribute('Feral');
 neutralArray.push(feral);
 
 class magicAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -292,8 +293,8 @@ var magic = new magicAttribute('Magic');
 neutralArray.push(magic);
 
 class geoAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -317,8 +318,8 @@ var quartz = new geoAttribute('Quartz');
 neutralArray.push(quartz);
 
 class buildingAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -342,8 +343,8 @@ var house = new buildingAttribute('House');
 neutralArray.push(house);
 
 class landAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -371,8 +372,8 @@ neutralArray.push(ocean);
 //-------------------------------------------
 
 class musicAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -405,8 +406,8 @@ timeArray.push(musicBox);
 //-------------------------------------------
 
 class dramaticAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -431,8 +432,8 @@ var dramatic = new dramaticAttribute('Dramatic');
 lightArray.push(dramatic);
 
 class diceAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -470,8 +471,8 @@ lightArray.push(eightBall);
 //-------------------------------------------
 
 class charmAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -495,8 +496,8 @@ var flushed = new charmAttribute('Flushed');
 heartArray.push(flushed);
 
 class sodaAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -524,8 +525,8 @@ heartArray.push(soda);
 //-------------------------------------------
 
 class angerAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -563,8 +564,8 @@ rageArray.push(anger);
 //-------------------------------------------
 
 class woodAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {
@@ -592,8 +593,8 @@ lifeArray.push(wood);
 //-------------------------------------------
 
 class magnetAttribute extends smodAttribute {
-  constructor(special_internal_name) {
-    super(special_internal_name);
+  constructor(special_internal_name, special_internal_descriptor) {
+    super(special_internal_name, special_internal_descriptor);
   }
 
   trigger() {

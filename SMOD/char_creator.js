@@ -312,7 +312,7 @@ function landUpdate() {
 
   for (var i = 0, length = oneAttributes.length; i < length; i++) {
       if (oneAttributes[i].checked) {
-      att1.innerHTML = attributeArray[oneAttributes[i].value].sin;
+      att1.innerHTML = attributeArray[oneAttributes[i].value].sid;
 
       break;
     }
@@ -320,7 +320,7 @@ function landUpdate() {
 
   for (var i = 0, length = twoAttributes.length; i < length; i++) {
       if (twoAttributes[i].checked) {
-      att2.innerHTML = attributeArray[twoAttributes[i].value].sin;
+      att2.innerHTML = attributeArray[twoAttributes[i].value].sid;
 
       break;
     }

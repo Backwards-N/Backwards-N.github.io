@@ -6,6 +6,8 @@ var debugText = document.querySelector('.debugText');
 var creatorMenu = document.querySelector('.creatorMenu');
 var playerName = document.querySelector('#playerName');
 var chatHandle = document.querySelector('#chatHandle');
+var attributeOne = document.querySelector('#att1');
+var attributeTwo = document.querySelector('#att2');
 
 // Meta stuff. Reminder to place elsewhere.
 
@@ -76,6 +78,9 @@ function constructLandCategorizer() {
       window.alert("NANI?!?!");
     }
   }
+
+  $(".attributeButtonPartOne").on('change', updateUpdate);
+  $(".attributeButtonPartTwo").on('change', updateUpdate);
 }
 
 constructLandCategorizer();
@@ -99,6 +104,7 @@ function updateUpdate() {
     handleUpdate();
     var maxINum = gritUpdate() + spdUpdate() + stlthUpdate() - badUpdate() + goodUpdate() + willUpdate(); // Points remaining, only applies to character creator, don't bother in other.
     gelUpdate();
+    landUpdate();
 
     // Updates the document based on points remaining.
 
@@ -297,6 +303,12 @@ function handleUpdate() {
   var internalHandle = chatHandle.value;
 
   return internalHandle;
+}
+
+// Retrieves currently selected land attributes.
+function landUpdate() {
+  att1.innerHTML = attributeArray[attribute1.value].sin;
+  att2.innerHTML = attributeArray[attribute2.value].sin;
 }
 
 /*

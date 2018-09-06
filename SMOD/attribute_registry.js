@@ -87,7 +87,7 @@ class artifactAttribute extends smodAttribute {
   }
 }
 
-var artifact = new artifactAttribute('Artifact');
+var artifact = new artifactAttribute('Artifact', 'Artifacts');
 neutralArray.push(artifact);
 
 class plushAttribute extends smodAttribute {
@@ -112,7 +112,7 @@ class plushAttribute extends smodAttribute {
   }
 }
 
-var plush = new plushAttribute('Plush');
+var plush = new plushAttribute('Plush', 'Plush');
 neutralArray.push(plush);
 
 class flammableAttribute extends smodAttribute {
@@ -137,8 +137,8 @@ class flammableAttribute extends smodAttribute {
   }
 }
 
-var inferno = new flammableAttribute('Inferno');
-var tinder = new flammableAttribute('Tinder');
+var inferno = new flammableAttribute('Inferno', 'Inferno');
+var tinder = new flammableAttribute('Tinder', 'Tinder');
 neutralArray.push(tinder, inferno);
 
 class glassAttribute extends smodAttribute {
@@ -163,7 +163,7 @@ class glassAttribute extends smodAttribute {
   }
 }
 
-var glass = new glassAttribute('Glass');
+var glass = new glassAttribute('Glass', 'Glass');
 neutralArray.push(glass);
 
 class humidAttribute extends smodAttribute {
@@ -188,8 +188,8 @@ class humidAttribute extends smodAttribute {
   }
 }
 
-var moist = new humidAttribute('Moist');
-var dry = new humidAttribute('Dry');
+var moist = new humidAttribute('Moist', 'Moistness');
+var dry = new humidAttribute('Dry', 'Dryness');
 neutralArray.push(moist, dry);
 
 class fragileAttribute extends smodAttribute {
@@ -214,7 +214,7 @@ class fragileAttribute extends smodAttribute {
   }
 }
 
-var brittle = new fragileAttribute('Brittle');
+var brittle = new fragileAttribute('Brittle', 'Brittleness');
 neutralArray.push(brittle);
 
 class weatherAttribute extends smodAttribute {
@@ -239,7 +239,7 @@ class weatherAttribute extends smodAttribute {
   }
 }
 
-var rain = new weatherAttribute('Rain');
+var rain = new weatherAttribute('Rain', 'Rain');
 neutralArray.push(rain);
 
 class animalAttribute extends smodAttribute {
@@ -264,7 +264,7 @@ class animalAttribute extends smodAttribute {
   }
 }
 
-var feral = new artifactAttribute('Feral');
+var feral = new artifactAttribute('Feral', 'Ferality');
 neutralArray.push(feral);
 
 class magicAttribute extends smodAttribute {
@@ -289,7 +289,7 @@ class magicAttribute extends smodAttribute {
   }
 }
 
-var magic = new magicAttribute('Magic');
+var magic = new magicAttribute('Magic', 'Magic');
 neutralArray.push(magic);
 
 class geoAttribute extends smodAttribute {
@@ -314,7 +314,7 @@ class geoAttribute extends smodAttribute {
   }
 }
 
-var quartz = new geoAttribute('Quartz');
+var quartz = new geoAttribute('Quartz', 'Quartz');
 neutralArray.push(quartz);
 
 class buildingAttribute extends smodAttribute {
@@ -339,7 +339,7 @@ class buildingAttribute extends smodAttribute {
   }
 }
 
-var house = new buildingAttribute('House');
+var house = new buildingAttribute('House', 'Houses');
 neutralArray.push(house);
 
 class landAttribute extends smodAttribute {
@@ -364,7 +364,7 @@ class landAttribute extends smodAttribute {
   }
 }
 
-var ocean = new landAttribute('Ocean');
+var ocean = new landAttribute('Ocean', 'Oceans');
 neutralArray.push(ocean);
 
 //-------------------------------------------
@@ -393,7 +393,7 @@ class musicAttribute extends smodAttribute {
   }
 }
 
-var musicBox = new musicAttribute('Music Box');
+var musicBox = new musicAttribute('Music Box', 'Music Boxes');
 timeArray.push(musicBox);
 
 //-------------------------------------------
@@ -428,7 +428,7 @@ class dramaticAttribute extends smodAttribute {
   }
 }
 
-var dramatic = new dramaticAttribute('Dramatic');
+var dramatic = new dramaticAttribute('Dramatic', 'Drama');
 lightArray.push(dramatic);
 
 class diceAttribute extends smodAttribute {
@@ -453,7 +453,7 @@ class diceAttribute extends smodAttribute {
   }
 }
 
-var eightBall = new diceAttribute('8-Ball');
+var eightBall = new diceAttribute('8-Ball', 'Eight-balls');
 lightArray.push(eightBall);
 
 //-------------------------------------------
@@ -492,7 +492,7 @@ class charmAttribute extends smodAttribute {
   }
 }
 
-var flushed = new charmAttribute('Flushed');
+var flushed = new charmAttribute('Flushed', 'Flush');
 heartArray.push(flushed);
 
 class sodaAttribute extends smodAttribute {
@@ -517,7 +517,7 @@ class sodaAttribute extends smodAttribute {
   }
 }
 
-var soda = new sodaAttribute('Soda');
+var soda = new sodaAttribute('Soda', 'Soda');
 heartArray.push(soda);
 
 //-------------------------------------------
@@ -546,7 +546,7 @@ class angerAttribute extends smodAttribute {
   }
 }
 
-var anger = new angerAttribute('Anger');
+var anger = new angerAttribute('Anger', 'Anger');
 rageArray.push(anger);
 
 //-------------------------------------------
@@ -585,7 +585,7 @@ class woodAttribute extends smodAttribute {
   }
 }
 
-var wood = new woodAttribute('Wooden');
+var wood = new woodAttribute('Wooden', 'Wood');
 lifeArray.push(wood);
 
 //-------------------------------------------
@@ -614,13 +614,13 @@ class magnetAttribute extends smodAttribute {
   }
 }
 
-var magnetOne = new magnetAttribute('Magnet I');
-var magnetTwo = new magnetAttribute('Magnet II');
-var magnetThree = new magnetAttribute('Magnet III');
-var magnetFour = new magnetAttribute('Magnet IV');
-var magnetFive = new magnetAttribute('Magnet V');
-var magnetSix = new magnetAttribute('Magnet VI');
-var magnetSeven = new magnetAttribute('Magnet VII');
+var magnetOne = new magnetAttribute('Magnet I', 'Lodestones');
+var magnetTwo = new magnetAttribute('Magnet II', 'Lodestones'));
+var magnetThree = new magnetAttribute('Magnet III', 'Lodestones'));
+var magnetFour = new magnetAttribute('Magnet IV', 'Magnetism');
+var magnetFive = new magnetAttribute('Magnet V', 'Magnetism');
+var magnetSix = new magnetAttribute('Magnet VI', 'Magnetism');
+var magnetSeven = new magnetAttribute('Magnet VII', 'Magnetars'));
 bloodArray.push(magnetOne, magnetTwo, magnetThree, magnetFour, magnetFive, magnetSix, magnetSeven);
 
 //-------------------------------------------

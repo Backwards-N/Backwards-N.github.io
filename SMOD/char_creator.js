@@ -307,9 +307,23 @@ function handleUpdate() {
 
 // Retrieves currently selected land attributes.
 function landUpdate() {
-  if (attribute1 != null && attribute2 != null) {
-    att1.innerHTML = attributeArray[attribute1.value].sin;
-    att2.innerHTML = attributeArray[attribute2.value].sin;
+  oneAttributes = $(input[name='attribute1']);
+  twoAttributes = $(input[name='attribute2']);
+
+  for (var i = 0, length = oneAttributes.length; i < length; i++) {
+      if (oneAttributes[i].checked) {
+      att1.innerHTML = attributeArray[oneAttributes[i].value].sin;
+
+      break;
+    }
+  }
+
+  for (var i = 0, length = twoAttributes.length; i < length; i++) {
+      if (twoAttributes[i].checked) {
+      att2.innerHTML = attributeArray[twoAttributes[i].value].sin;
+
+      break;
+    }
   }
 }
 

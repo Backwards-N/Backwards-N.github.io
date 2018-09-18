@@ -13,3 +13,9 @@ To begin start thinking in code structures, like the parts of a planet. The type
 
   Lists. Lists are arrays of similar objects that can be used interchangeably.
   They are neccessary for categorizers to do their job.
+
+*/
+
+/* Tracking File
+
+Attributes: 27

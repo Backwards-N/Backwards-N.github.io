@@ -1,8 +1,9 @@
 // Definitions.
 class smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
     this.sin = special_internal_name;
     this.sid = special_internal_descriptor;
+    this.bs = internal_integer;
   }
 
   trigger() {console.log(this.sin + ' has been triggered!');}
@@ -33,8 +34,8 @@ var neutralArray = [];
 //-------------------------------------------
 
 class deaconAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -66,8 +67,8 @@ deaconArray.push(deacon);
 //-------------------------------------------
 
 class artifactAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -87,12 +88,12 @@ class artifactAttribute extends smodAttribute {
   }
 }
 
-var artifact = new artifactAttribute('Artifact', 'Artifacts');
+var artifact = new artifactAttribute('Artifact', 'Artifacts', 0);
 neutralArray.push(artifact);
 
 class plushAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -112,12 +113,12 @@ class plushAttribute extends smodAttribute {
   }
 }
 
-var plush = new plushAttribute('Plush', 'Plush');
+var plush = new plushAttribute('Plush', 'Plush', 1);
 neutralArray.push(plush);
 
 class flammableAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -137,13 +138,13 @@ class flammableAttribute extends smodAttribute {
   }
 }
 
-var inferno = new flammableAttribute('Inferno', 'Inferno');
-var tinder = new flammableAttribute('Tinder', 'Tinder');
+var inferno = new flammableAttribute('Inferno', 'Inferno', 2);
+var tinder = new flammableAttribute('Tinder', 'Tinder', 3);
 neutralArray.push(tinder, inferno);
 
 class glassAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -163,12 +164,12 @@ class glassAttribute extends smodAttribute {
   }
 }
 
-var glass = new glassAttribute('Glass', 'Glass');
+var glass = new glassAttribute('Glass', 'Glass', 4);
 neutralArray.push(glass);
 
 class humidAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -188,13 +189,13 @@ class humidAttribute extends smodAttribute {
   }
 }
 
-var moist = new humidAttribute('Moist', 'Moistness');
-var dry = new humidAttribute('Dry', 'Dryness');
+var moist = new humidAttribute('Moist', 'Moistness', 5);
+var dry = new humidAttribute('Dry', 'Dryness', 6);
 neutralArray.push(moist, dry);
 
 class fragileAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -214,12 +215,12 @@ class fragileAttribute extends smodAttribute {
   }
 }
 
-var brittle = new fragileAttribute('Brittle', 'Brittleness');
+var brittle = new fragileAttribute('Brittle', 'Brittleness', 7);
 neutralArray.push(brittle);
 
 class weatherAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -239,12 +240,12 @@ class weatherAttribute extends smodAttribute {
   }
 }
 
-var rain = new weatherAttribute('Rain', 'Rain');
+var rain = new weatherAttribute('Rain', 'Rain', 8);
 neutralArray.push(rain);
 
 class animalAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -264,12 +265,12 @@ class animalAttribute extends smodAttribute {
   }
 }
 
-var feral = new artifactAttribute('Feral', 'Ferality');
+var feral = new artifactAttribute('Feral', 'Ferality', 9);
 neutralArray.push(feral);
 
 class magicAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -289,12 +290,12 @@ class magicAttribute extends smodAttribute {
   }
 }
 
-var magic = new magicAttribute('Magic', 'Magic');
+var magic = new magicAttribute('Magic', 'Magic', 10);
 neutralArray.push(magic);
 
 class geoAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -314,12 +315,12 @@ class geoAttribute extends smodAttribute {
   }
 }
 
-var quartz = new geoAttribute('Quartz', 'Quartz');
+var quartz = new geoAttribute('Quartz', 'Quartz', 11);
 neutralArray.push(quartz);
 
 class buildingAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -339,12 +340,12 @@ class buildingAttribute extends smodAttribute {
   }
 }
 
-var house = new buildingAttribute('House', 'Houses');
+var house = new buildingAttribute('House', 'Houses', 12);
 neutralArray.push(house);
 
 class landAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -364,7 +365,7 @@ class landAttribute extends smodAttribute {
   }
 }
 
-var ocean = new landAttribute('Ocean', 'Oceans');
+var ocean = new landAttribute('Ocean', 'Oceans', 13);
 neutralArray.push(ocean);
 
 //-------------------------------------------
@@ -372,8 +373,8 @@ neutralArray.push(ocean);
 //-------------------------------------------
 
 class musicAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -393,7 +394,7 @@ class musicAttribute extends smodAttribute {
   }
 }
 
-var musicBox = new musicAttribute('Music Box', 'Music Boxes');
+var musicBox = new musicAttribute('Music Box', 'Music Boxes', 14);
 timeArray.push(musicBox);
 
 //-------------------------------------------
@@ -406,8 +407,8 @@ timeArray.push(musicBox);
 //-------------------------------------------
 
 class dramaticAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -428,12 +429,12 @@ class dramaticAttribute extends smodAttribute {
   }
 }
 
-var dramatic = new dramaticAttribute('Dramatic', 'Drama');
+var dramatic = new dramaticAttribute('Dramatic', 'Drama', 15);
 lightArray.push(dramatic);
 
 class diceAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -453,7 +454,7 @@ class diceAttribute extends smodAttribute {
   }
 }
 
-var eightBall = new diceAttribute('8-Ball', 'Eight-balls');
+var eightBall = new diceAttribute('8-Ball', 'Eight-balls', 16);
 lightArray.push(eightBall);
 
 //-------------------------------------------
@@ -471,8 +472,8 @@ lightArray.push(eightBall);
 //-------------------------------------------
 
 class charmAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -492,12 +493,12 @@ class charmAttribute extends smodAttribute {
   }
 }
 
-var flushed = new charmAttribute('Flushed', 'Flush');
+var flushed = new charmAttribute('Flushed', 'Flush', 17);
 heartArray.push(flushed);
 
 class sodaAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -517,7 +518,7 @@ class sodaAttribute extends smodAttribute {
   }
 }
 
-var soda = new sodaAttribute('Soda', 'Soda');
+var soda = new sodaAttribute('Soda', 'Soda', 18);
 heartArray.push(soda);
 
 //-------------------------------------------
@@ -525,8 +526,8 @@ heartArray.push(soda);
 //-------------------------------------------
 
 class angerAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -546,7 +547,7 @@ class angerAttribute extends smodAttribute {
   }
 }
 
-var anger = new angerAttribute('Anger', 'Anger');
+var anger = new angerAttribute('Anger', 'Anger', 19);
 rageArray.push(anger);
 
 //-------------------------------------------
@@ -564,8 +565,8 @@ rageArray.push(anger);
 //-------------------------------------------
 
 class woodAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -585,7 +586,7 @@ class woodAttribute extends smodAttribute {
   }
 }
 
-var wood = new woodAttribute('Wooden', 'Wood');
+var wood = new woodAttribute('Wooden', 'Wood', 20);
 lifeArray.push(wood);
 
 //-------------------------------------------
@@ -593,8 +594,8 @@ lifeArray.push(wood);
 //-------------------------------------------
 
 class magnetAttribute extends smodAttribute {
-  constructor(special_internal_name, special_internal_descriptor) {
-    super(special_internal_name, special_internal_descriptor);
+  constructor(special_internal_name, special_internal_descriptor, internal_integer) {
+    super(special_internal_name, special_internal_descriptor, internal_integer);
   }
 
   trigger() {
@@ -614,13 +615,13 @@ class magnetAttribute extends smodAttribute {
   }
 }
 
-var magnetOne = new magnetAttribute('Magnet I', 'Lodestones');
-var magnetTwo = new magnetAttribute('Magnet II', 'Lodestones');
-var magnetThree = new magnetAttribute('Magnet III', 'Lodestones');
-var magnetFour = new magnetAttribute('Magnet IV', 'Magnetism');
-var magnetFive = new magnetAttribute('Magnet V', 'Magnetism');
-var magnetSix = new magnetAttribute('Magnet VI', 'Magnetism');
-var magnetSeven = new magnetAttribute('Magnet VII', 'Magnetars');
+var magnetOne = new magnetAttribute('Magnet I', 'Lodestones', 21);
+var magnetTwo = new magnetAttribute('Magnet II', 'Lodestones', 22);
+var magnetThree = new magnetAttribute('Magnet III', 'Lodestones', 23);
+var magnetFour = new magnetAttribute('Magnet IV', 'Magnetism', 24);
+var magnetFive = new magnetAttribute('Magnet V', 'Magnetism', 25);
+var magnetSix = new magnetAttribute('Magnet VI', 'Magnetism', 26);
+var magnetSeven = new magnetAttribute('Magnet VII', 'Magnetars', 27);
 bloodArray.push(magnetOne, magnetTwo, magnetThree, magnetFour, magnetFive, magnetSix, magnetSeven);
 
 //-------------------------------------------

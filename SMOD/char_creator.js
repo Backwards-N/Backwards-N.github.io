@@ -132,6 +132,7 @@ function logPlayer() {
     logClass = classUpdate();
     logAspect = aspectUpdate();
     logMoon = moonUpdate();
+    logLand = landUpdate();
     logHandle = handleUpdate();
     logGrit = gritUpdate();
     logSpd = spdUpdate();
@@ -151,7 +152,7 @@ function logPlayer() {
         class: logClass, // Player class, retrieved from dropdown.
         aspect: logAspect, // Player aspect, retrieved from dropdown.
         moon: logMoon, // Dream moon, retrieved from radio button.
-        land: [0, 0], // Land array, retrieved from categorizer. Order unimportant.
+        land: logLand, // Land array, retrieved from categorizer. Order unimportant.
         cnsrt: [0, 0], // Consort array, retrieved from categorizer. Personality, type.
         denizen: 0, // Player denizen, retrieved from selection wheel.
         stats: [logGrit, logSpd, logStlth, logBad, logGood, logWill], // Stats array, retrieved from numerical entries. Mangrit, speed, stealth, bad luck, good luck, willpower.
@@ -310,10 +311,12 @@ function handleUpdate() {
 function landUpdate() {
   oneAttributes = document.getElementsByName('attribute1');
   twoAttributes = document.getElementsByName('attribute2');
+  landArray = [];
 
   for (var i = 0, length = oneAttributes.length; i < length; i++) {
       if (oneAttributes[i].checked) {
       att1.innerHTML = getArrayByID(aspectUpdate())[oneAttributes[i].value].sid;
+      landArray.push(getArrayByID(aspectUpdate())[oneAttributes[i].value].bs);
 
       break;
     }
@@ -322,10 +325,13 @@ function landUpdate() {
   for (var i = 0, length = twoAttributes.length; i < length; i++) {
       if (twoAttributes[i].checked) {
       att2.innerHTML = attributeArray[twoAttributes[i].value].sid;
+      landArray.push(attributeArray[twoAttributes[i].value].bs);
 
       break;
     }
   }
+
+  return landString;
 }
 
 /*

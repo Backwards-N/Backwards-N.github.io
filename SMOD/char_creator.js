@@ -331,7 +331,7 @@ function landUpdate() {
     }
   }
 
-  return landString;
+  return landArray;
 }
 
 /*

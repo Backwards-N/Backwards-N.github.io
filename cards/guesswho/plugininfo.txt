@@ -1,0 +1,16 @@
+<plugin>
+
+<deckzone>
+     <label>Pool</label>
+     <gamezonetoloadto>Deck</gamezonetoloadto>
+     <shuffle>yes</shuffle>
+</deckzone>
+
+<gamezone>
+	<label>Deck</label>
+	<visibletoowner>no</visibletoowner>
+	<visibletoothers>no</visibletoothers>
+	<isshared>yes</isshared>
+</gamezone>
+
+</plugin>

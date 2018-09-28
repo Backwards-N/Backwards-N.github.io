@@ -4,6 +4,6 @@
 <quality>HIGH</quality>
 <versionurl>https://backwards-n.js.org/cards/guesswho/version.txt</versionurl>
 <updateurl>https://backwards-n.js.org/cards/guesswho/updatelist.txt</updateurl>
-<message>The first and only version, probably.</message>
+<message>Update 2.</message>
 
 </version>

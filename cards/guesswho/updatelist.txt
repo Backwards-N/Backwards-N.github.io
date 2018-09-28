@@ -2,7 +2,7 @@ hsguesswho	09-27-18
 plugins/hsguesswho/plugininfo.txt	https://backwards-n.js.org/cards/guesswho/plugininfo.txt	25457
 plugins/hsguesswho/sets/carddata.txt	https://backwards-n.js.org/cards/guesswho/carddata.txt	128199
 plugins/hsguesswho/version.txt	https://backwards-n.js.org/cards/guesswho/version.txt	28370
-plugins/hsguesswho/sets/setimages/general/cardback.png	https://backwards-n.js.org/cards/0.png	-8109
-plugins/hsguesswho/sets/setimages/general/spawned.png	https://backwards-n.js.org/cards/0.png	-8109
+plugins/hsguesswho/sets/setimages/general/spawned.png	https://backwards-n.js.org/cards/0.png	-55383
+plugins/hsguesswho/sets/setimages/general/cardback.png	https://backwards-n.js.org/cards/0.png	-55383
 CardGeneralURLs:
 https://backwards-n.js.org/cards/

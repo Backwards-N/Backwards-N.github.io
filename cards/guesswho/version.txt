@@ -1,0 +1,9 @@
+<version>
+
+<lastupdateYYMMDD>180927</lastupdateYYMMDD>
+<quality>HIGH</quality>
+<versionurl>https://backwards-n.js.org/cards/guesswho/version.txt</versionurl>
+<updateurl>https://backwards-n.js.org/cards/guesswho/updatelist.txt</updateurl>
+<message>Update 2.</message>
+
+</version>

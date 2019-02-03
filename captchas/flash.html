@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+  <script type="text/javascript" src="math.js"></script>
+  <script type="text/javascript" src="dommanager.js"></script>
+  <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+  <p>All single code operators use Code 1.</p>
+  <div class="row">
+  <div class="column">Code 1: <input type="text" name="Code 1" value="nZ7Un6BI" id="c1"></div>
+  <div class="column">Code 2: <input type="text" name="Code 2" value="DQMmJLeK" id="c2"></div>
+  <div class="column">Shift: <input type="text" name="Shift Degree" value="0" id="s"></div>
+  <div class="row"><div class="column">***</div><div class="column"><p><input type="button" name="Update" value="Calculate!" id="update"></p></div><div class="column">***</div></div>
+  <script>document.getElementById("update").addEventListener("click", update);</script>
+
+  <div class="row">
+  <div class="column"><p id="and"></p>
+  <p id="or"></p></div>
+  <div class="column"><p id="xor"></p>
+  <p id="ssr"></p></div>
+  <div class="column"><p id="zsr"></p>
+  <p id="zsl"></p>
+  <p id="not"></p></div>
+  </div>
+
+  <script>update();</script>
+
+  <p><iframe src="http://www.mspaintadventures.com/scraps2/captchas.swf" width="100%" height="600"></iframe></p>
+</body>

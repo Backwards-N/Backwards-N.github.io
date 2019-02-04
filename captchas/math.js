@@ -179,7 +179,7 @@ function capZsl (c, s) {
   var w = 0;
 
   for (var i in code) {
-    w = code[i] << s;
+    w = (code[i] << s) % 64;
     binW.push(w);
   }
 

@@ -1,25 +1,18 @@
-![a prospit themed server sits in the void](./images/furthest-ring-149.png)
 # The Furthest Ring
-A website for multiplayer JS based games as well as minor Javascript projects.
+The purpose of this project is to host a series of games and game-related tools, written primarily in javascript, and mostly relying on client-side activity.
 
-Please contribute and don't be afraid to submit new ideas for projects! I'm likely to accept anything provided it isn't hateful (or trolling.)
+Google Firebase will be used to handle server-side account related functionality.
 
-# Things to do
-* CSS improvements.
+Suggestions for new tools and games are welcome, and can be done on the Furthest Ring discord server [here.](https://discord.gg/jAZC9N4)
 
-# Current Projects
+The website domain ( backwards-n.js.org ) is derived from the website’s GH-Pages domain. The website itself should be referred to as The Furthest Ring.
 
-## SMOD
+Current Subprojects:
 
-A browser-based multiplayer Homestuck fangame. It aims to simulate _all_ of the intracacies of SBURB.
+* Project: SMOD
+* Homestuck Fan Tools
+* Dodekistrophy
+* Communitalk
+* Hecate
 
-Planned features include:
-* Sylladex (complete with fetch modi).
-* Combat.
-* Alchemy.
-* Eastern eggs.
-* Class and aspects.
-* Land generation.
-* Time shenanigans.
-* The Furthest Ring.
-* Western eggs.
+For more detailed info, including changelogs, TODO lists, and info on individual projects check out [the google docs.](https://docs.google.com/document/d/1Mtlcvhleztx2h2sIrruFiQ3IjlkftKp2jbeU9Nyt7W4/edit?usp=sharing)

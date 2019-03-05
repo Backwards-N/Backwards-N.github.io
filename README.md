@@ -1,5 +1,5 @@
 # The Furthest Ring
-The purpose of this project is to host a series of games and game-related tools, written primarily in javascript, and mostly relying on client-side activity.
+The purpose of this project is to host a series of games and game-related tools, written primarily in JavaScript, and mostly relying on client-side activity.
 
 Google Firebase will be used to handle server-side account related functionality.
 

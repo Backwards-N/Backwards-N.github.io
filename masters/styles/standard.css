@@ -1,113 +1,135 @@
-/* The sidebar menu, change this soon. */
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 10%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 90%;
-    background-color: #131313; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 2%;
-    font: normal 16px/1 "Liberation Mono", Liberation, monospace;
+/* :root {
+	--canvas: #101010;
+	--text: #FEFEFE;
+	--bright: #F092FF;
+	--theme: #DE00FF;
+	--shade: #C21AFF;
+	--architect: #8400FD;
+	--depth: #4700FA;
+	--darktheme: #1F0026;
+	--deepvoid: #070024;
+} */
+
+/* Dersite Palette */
+:root {
+	--canvas: #101010;
+	--text: #FEFEFE;
+	--bright: #F092FF;
+	--theme: #DE00FF;
+	--shade: #4A0689;
+	--architect: #5D08AB;
+	--depth: #1B0A8E;
+	--darktheme: #1F0026;
+	--deepvoid: #070024;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+@font-face {
+	font-family: Carima;
+	src: url(carima.ttf);
 }
 
-/* Top Menu Bar */
-.topBar{
-  text-align: center;
-  margin: 0em 0%;
-  padding: 1em 1em;
-  color: #eeeeee;
-  background: #444444;
-  font: normal 16px/1 "Liberation Mono", Liberation, monospace;
+.row .col {
+	  padding: 0;
+		margin: auto;
 }
 
-.standard {
-  margin: 2em 10em 0em 0%;
-  padding: 1em 1em;
-  font: normal 16px/1 "Liberation Mono", Liberation, monospace;
-  color: #eeeeee;
-  text-align: left;
-  background: #242424;
-  border-bottom: 2px solid rgba(0, 0, 0, 1);
+.col.s4 p {
+	text-align: center;
 }
 
-.categorizer span {
-  margin: 2em 0em 0em 0%;
-  padding: 1em 1em;
-  font: normal 16px/1 "Liberation Mono", Liberation, monospace;
-  color: #eeeeee;
-  background: #242424;
-  border-bottom: 2px solid rgba(0, 0, 0, 1);
-  display: inline-block;
-  display: -moz-inline-box;
-  *display: inline; /* For IE7 */
-  zoom: 1; /* Trigger hasLayout */
-  width: 15%;
-  text-align: center;
-}
-
-form {
-    text-align: left;
-}
-
-p.creatorMenu {
-    text-align: left;
-}
-
-.debugText {
-    text-align: left;
-    border-style: none;
-}
-
-.info {
-    text-align: left;
-}
-
-.helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-.logo {
-    width: 10%;
-    min-width: 2em;
-    vertical-align: middle;
-}
-
-input[type=number]{
-    width: 3em;
-}
-
-a {
-    text-decoration: none;
-    color: #818181;
-}
-
-a:hover {
-    color: #f1f1f1;
-}
-
-h1 {
-    background: -webkit-linear-gradient(gray, purple);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    font-family: "Liberation Mono", Liberation, monospace;
-}
-
-.linklist {
-    text-align: center;
-    margin-bottom: 1em;
+* {
+	  font-family: "Lucidia Semi-Condensed", Verdana, sans-serif;
+		font-size: 1.5vmax;
+		line-height: 1.5vmax;
 }
 
 body {
-  background-color: #242424;
+	background-color: var(--darktheme);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+		color: var(--theme);
+		transition: color 0.2s;
+}
+
+a:hover {
+		color: var(--bright);
+}
+
+#content {
+	margin: 0;
+	padding: 0;
+}
+
+#top-bar {
+	color: var(--text);
+	background-color: var(--shade);
+	min-height: 6vmax;
+}
+
+#main {
+	color: var(--text);
+	background-color: var(--darktheme);
+}
+
+#display {
+	color: var(--text);
+	background-color: var(--darktheme);
+	min-height: 91.5vmax;
+}
+
+#right-bar {
+	color: var(--text);
+	background-color: var(--architect);
+	min-height: 101vmax;
+	margin-bottom: 0;
+}
+
+#footer {
+	color: var(--text);
+	background-color: var(--canvas);
+	min-height: 10vmax;
+	margin-bottom: 0;
+}
+
+.box {
+	color: var(--text);
+	background-color: var(--theme);
+}
+
+.divider {
+	background-color: var(--theme);
+}
+
+#top-bar .col.s3 {
+	margin-top: 2vmax;
+}
+
+#top-bar .col.s3 a {
+	font-family: "Courier New", Courier, Verdana, sans-serif;
+	font-size: 1.6vmax;
+	line-height: 1.6vmax;
+}
+
+#title-zone {
+	padding: 1.25vmax 1.25vmax;
+	margin: 0;
+	height:4vmax;
+	font-family: Carima, "Lucidia Semi-Condensed", Verdana, sans-serif;
+	font-size: 2vmax;
+}
+
+#logo {
+	width: 4vmax;
+	height:4vmax;
+	padding: 0;
+	margin-left: 1.5vmax;
+}
+
+.padding {
+	padding: 0;
+	margin: 0.5vmax;
 }

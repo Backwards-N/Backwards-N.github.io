@@ -12,9 +12,17 @@
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #EEEEEE;
   font-size: 1em;
+	font-family: 'Exo 2', sans-serif;
   line-height: 1.4;
+
+	background-image: url("../img/background.png"), linear-gradient(#0F120D, #0C1D01);
+
+	background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /*
@@ -97,6 +105,40 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+a:link {
+	color: #0AA43E;
+}
+
+a:visited {
+	color: #00852D;
+}
+
+h1 {
+	color: #9A0044;
+	text-align: center;
+	font-size: 5em;
+	line-height: 0.5
+}
+
+.post {
+	padding: 0em 1em;
+	border: 0.1em solid #CDCDCD;
+	border-radius: 1em;
+	background-color: rgba(160, 160, 160, 0.5);
+	margin: 0.75em 25% 0.75em 25%;
+}
+
+.signature {
+	text-align: right;
+}
+
+.linkbar {
+	text-align: center;
+	font-weight: bolder;
+	word-spacing: 6em;
+	margin: -1.25em 25% 1.5em 25%;
+}
 
 /* ==========================================================================
    Helper classes
@@ -262,4 +304,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-

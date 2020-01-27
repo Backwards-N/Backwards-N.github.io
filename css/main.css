@@ -12,6 +12,8 @@
    ========================================================================== */
 
 html {
+	min-height: 100%;
+
   color: #EEEEEE;
   font-size: 1em;
 	font-family: 'Exo 2', sans-serif;
@@ -21,8 +23,10 @@ html {
 
 	background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% auto, cover;
   position: relative;
+
+	background-color: #0F120D
 }
 
 /*
